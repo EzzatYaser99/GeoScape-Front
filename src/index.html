@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <script type='text/javascript'>let url = window.location.pathname;
+  while (url.includes('//')) {
+    url = url.replace('//', '/');
+  }
+  let Urlparts = url.split('/');
+  for (let i = 0; i < Urlparts.length; i++) {
+    if ((Urlparts[i] !== '/' && Urlparts[0].trim() !== '')) {
+      if (Urlparts[i].indexOf('#') > -1) {
+        break;
+      } else {
+        url += Urlparts[1] + '/';
+      }
+    }
+  }
+  if (url.startsWith('/') == false) {
+    url = '/' + url;
+  }
+  if (url.endsWith('/') == false) {
+    url += '/';
+  }
+  baseUrl = window.location.protocol + '//' + window.location.host + url;
+  document.write('<base href="' + baseUrl + '"/>');    </script>
+  <base href="/" />
+  <meta charset="utf-8">
+  <title>GeoScape LandScape</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-title" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.bg-image{
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-color:transparent;
+  margin:0;
+  padding:0;
+  height:400px;
+  border-radius:0px 0px 6px 6px;
+
+}
+.address-card{
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  .line{
+    background-color: #86BB46;
+    height: 3px;
+  }
+}
+:host ::ng-deep {
+  .p-multiselect {
+    width: 100%;
+
+  }
+  .p-multiselect-items-wrapper {
+
+    max-height: 350px !important;
+    min-height: 350px !important;
+    //height: auto !important;
+  }
+  .successMessage .p-message .p-message-wrapper{
+    padding: 10px .75rem;
+    .p-message-icon , .p-message-close {
+      color:#86BB46;
+    }
+    background:white;
+    border-radius:8px;
+  }
+  .successMessage .p-message.p-message-success{
+    color:#86BB46;
+    border: 2px solid #86BB46;
+    border-left: 6px solid #86BB46;
+
+  }
+  .errorMessage .p-message .p-message-wrapper{
+    padding: 10px .75rem;
+  }
+
+}
+
+.image-radius {
+  border-radius: 5px;
+}
+
+.get-in-Touch {
+  text-align: center;
+  span {
+    color: red;
+    margin-left: 10px;
+  }
+}

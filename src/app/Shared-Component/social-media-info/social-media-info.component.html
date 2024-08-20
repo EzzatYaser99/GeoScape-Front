@@ -1,0 +1,14 @@
+@if (this.socialMediaInfo) {
+  <div class="socialMedia">
+    @for (item of socialMediaInfo; track item) {
+      <a [href]="item.herf" [title]="item.title"
+         target="_blank"
+         class="zoomin"
+      >
+        @if (item.iconClass) {
+          <i class="{{item.iconClass}}"></i>
+        }
+      </a>
+    }
+  </div>
+}

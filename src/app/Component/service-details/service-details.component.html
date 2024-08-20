@@ -1,0 +1,89 @@
+<div class="grid w-full mx-auto zoomin animation-duration-1000 animation-iteration-1">
+  <div class="col-12 md:col-4 appear-in-mobile ">
+    <div class="lg:w-10 w-12 m-auto ">
+      <h3>Our Services</h3>
+      <p-listbox
+        [filter]="true"
+        [options]="services"
+        [(ngModel)]="selectedServices"
+        optionLabel="name"
+        [style]="{ width: '100%' }"
+        [listStyle]="{'max-height': '800px'}"
+      >
+        <ng-template let-service pTemplate="item">
+          <div class="flex align-items-center gap-2">
+            <img
+              [src]="'assets/images/services/'+ service.image"
+              style="width: 50px"/>
+            <div>{{ service.name }}</div>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+  </div>
+
+
+  <div class="col-12  md:col-8 mt-3 md:mt-7 gallery-product">
+    <div class="w-12 m-auto ">
+        <p-galleria
+          [value]="selectedServices?.subImages || services[0].subImages "
+          [showItemNavigators]="true"
+          [responsiveOptions]="responsiveOptions"
+          [containerStyle]="{ 'max-width': '100%' }"
+          [numVisible]="4">
+          <ng-template pTemplate="item" let-item>
+            <img class="w-full" [style.border-radius]="'10px 10px 0px 0px '"
+                 [src]="'assets/images/service-details/'+ item?.image"
+                 alt="Image"
+                 width="100%" height="400">
+
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="grid w-full mx-auto grid-nogutter justify-content-center">
+              <img [src]="'assets/images/service-details/'+ item?.image" style="width:100px; height:60px;"/>
+            </div>
+          </ng-template>
+        </p-galleria>
+
+
+      <div><h3>{{ selectedServices?.name || services[0].name}}</h3></div>
+      <div><p>{{ selectedServices?.description  || services[0].description }}</p></div>
+      <div><h3> Our Approach </h3></div>
+      <div><p>{{ selectedServices?.whatWeDo || services[0].whatWeDo }}</p></div>
+
+    </div>
+
+
+  </div>
+  <div class="col-12 md:col-4 disappear-in-mobile">
+    <div class="lg:w-10 w-12 m-auto ">
+      <h3>Our Services</h3>
+      <p-listbox
+        [filter]="true"
+        [options]="services"
+        [(ngModel)]="selectedServices"
+        optionLabel="name"
+        [style]="{ width: '100%' }"
+        [listStyle]="{'max-height': '800px'}"
+      >
+        <ng-template let-service pTemplate="item">
+          <div class="flex align-items-center gap-2">
+            <img
+              [src]="'assets/images/services/'+ service.image"
+              style="width: 50px"/>
+            <div>{{ service.name }}</div>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+

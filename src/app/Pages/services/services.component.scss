@@ -1,0 +1,138 @@
+
+.carsoul-bg {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.product-item {
+  .product-item-content {
+    border-radius: 3px;
+    margin: .3rem;
+    text-align: center !important;
+    padding: 2rem 0 0 0;
+  }
+
+  .product-image {
+    width: 100% !important;
+  }
+  h2 {
+    color: white;
+    font-size: 28px;
+  }
+
+  p {
+    margin: 0px;
+  }
+}
+
+
+.carsoul-bg .p-button {
+  color: #86BB46;
+  background: #ffffff;
+  border: 2px solid whitesmoke;
+}
+
+/* Start carsoul Style*/
+:host ::ng-deep {
+  .p-carousel {
+    .p-carousel-indicators {
+      padding: 20px 0px;
+
+      .p-carousel-indicator button {
+        background-color: white;
+        width: 14px !important;
+        height: 14px !important;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        border-radius: 50% !important;
+      }
+
+      .p-carousel-indicator.p-highlight button {
+        background-color: #ffbe33 !important;
+      }
+
+      justify-content: center !important;
+      align-content: end !important;
+    }
+
+    .p-carousel-content {
+      .p-carousel-prev, .p-carousel-next {
+        color: #ffbe33 !important;
+        background: transparent;
+        border-radius: 50%;
+      }
+
+      .p-carousel-prev:enabled:hover, .p-carousel-next:enabled:hover {
+        color: white !important;
+        background: none !important;
+      }
+    }
+
+  }
+
+  .carsoul-bg .p-icon {
+    width: 10rem;
+    height: 2rem;
+  }
+
+}
+
+
+.zoom-img img {
+  border: 7px solid white;
+}
+
+/* Start fieldset Style*/
+:host ::ng-deep {
+  .p-fieldset .p-fieldset-legend {
+    padding: 10px;
+
+  }
+
+  .p-card .p-card-title {
+    font-size: 1rem
+
+  }
+
+  .p-card .p-card-content {
+    padding: 0px;
+
+  }
+
+  .p-card .p-card-footer{
+    padding: 0rem;
+
+  }
+}
+
+.card {
+  transition: all .3s;
+img{
+  border-radius:10px 10px 0px 0px
+}
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+.p-card .p-card-body {
+  padding: 1rem;
+}
+
+/* End fieldset Style*/
+
+@media screen and (max-width: 770px) {
+  .product-item {
+    h2 {
+      color: white;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 13px;
+
+    }
+  }
+  p {
+    font-size: 14px;
+
+  }
+}

@@ -1,0 +1,98 @@
+<div class="bg-image flex justify-content-start align-items-center text-center
+zoomin animation-duration-1000 animation-iteration-1"
+     style='background-image: url("assets/images/service-details/soft-landscape/soft-landscape-4.jpg")'>
+    <div class="home-text zoomin animation-duration-2000 animation-iteration-1">
+    <p class="px-5">Our goal is to design stunning and functional environments
+      for our clients with the
+      utmost professionalism.</p>
+    </div>
+
+    <div class="w-11 absolute">
+  <div class="overlay w-full"></div>
+  </div>
+</div>
+<div class="my-5 zoomin animation-duration-1000 animation-iteration-1">
+  <p-fieldset>
+    <ng-template pTemplate="header">
+      <div class="flex align-items-center gap-1 px-2">
+        <p-avatar
+          [image]="'assets/images/logo.png'"
+          shape="circle"/>
+        <span class="font-bold ml-1">Welcome to Geoscape Landscape</span>
+      </div>
+    </ng-template>
+    <p class="m-0  zoomin animation-duration-1000 animation-iteration-1">
+      <span class="block font-bold"> Transforming Spaces, Creating Memories</span>
+
+      At Geoscape Landscapes, we specialize in designing and creating outdoor environments that blend natural
+      beauty with functional elegance. Whether you’re looking to revamp your garden,
+      create a serene outdoor retreat, or enhance your commercial property,
+      our team of expert landscape architects and horticulturists are here to bring your vision to life.</p>
+  </p-fieldset>
+</div>
+
+
+<div class="mb-5">
+  <div class="text-center mb-3"><h1 class="" style="font-family: 'FreeSerif'">Why Choose Us ?</h1></div>
+  <div class="grid w-full mx-auto">
+    <div class="md:col-6 lg:col-3">
+      <div class="card">
+        <h3>Expertise</h3>
+        <p>With 12 years of experience in the industry, we bring a wealth of knowledge
+          and a passion for landscape design to every project.</p>
+      </div>
+    </div>
+    <div class="md:col-6 lg:col-3 mt-5 md:mt-0 lg:mt-5">
+      <div class="card green-Bg-Color">
+        <h3>Personalized Approach</h3>
+        <p>We tailor our services to meet your specific needs and preferences,
+          ensuring a unique and satisfying experience.</p>
+      </div>
+    </div>
+    <div class="md:col-6 lg:col-3 mt-5 md:mt-0 ">
+      <div class="card">
+        <h3>Sustainability</h3>
+        <p>We prioritize eco-friendly practices and sustainable solutions to create landscapes
+          that are both beautiful and environmentally responsible.</p></div>
+    </div>
+    <div class="md:col-6 lg:col-3 mt-5 md:mt-0 lg:mt-5">
+      <div class="card green-Bg-Color">
+        <h3>Customer Satisfaction</h3>
+        <p>Our commitment to quality and customer satisfaction is unmatched.
+          We’re dedicated to exceeding your expectations every step of the way.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="pt-0 w-full approvals-documents">
+  <p-fieldset>
+    <ng-template pTemplate="header">
+      <div class="flex align-items-center gap-1 px-2">
+        <p-avatar
+          [image]="'assets/images/logo.png'"
+          shape="circle"/>
+        <span class="font-bold greenColor ml-2">Company Approvals</span>
+      </div>
+    </ng-template>
+      <div class="grid w-full mx-auto mt-5">
+        @for (document of documents.slice(1, 6); track document) {
+          <div class="col-6 sm:col-4  md:col-2 lg:col-2 m-auto">
+            <div class="approvals text-center">
+
+              <a target="_self" [routerLink]="'/main/uploadPdf/'+document.id"><img
+                class="block m-auto" [src]="'assets/document-approvals/'+ document.imgSrc" width="100%" alt="{{ document.name }}">
+              </a>
+
+              <a class="block mt-4" target="_self" [routerLink]="'/main/uploadPdf/'+document.id"> {{ document.name }}
+
+              </a>
+            </div>
+          </div>
+        }
+
+      </div>
+  </p-fieldset>
+
+</section>

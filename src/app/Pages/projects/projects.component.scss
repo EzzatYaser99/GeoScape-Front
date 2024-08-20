@@ -1,0 +1,42 @@
+.bg-image {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: 350px;
+  border-radius: 0px 0px 6px 6px;
+  h2 , h4 {
+    color:#565382;
+  }
+}
+
+/* Start fieldset Style*/
+:host ::ng-deep {
+  .p-fieldset .p-fieldset-legend {
+    padding: 6px;
+    background-color: unset;
+  }
+
+  .p-card .p-card-title {
+    font-size: .8rem
+  }
+
+  .p-card .p-card-content {
+    padding: 0px;
+
+  }
+}
+.name-length {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.desc-length {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

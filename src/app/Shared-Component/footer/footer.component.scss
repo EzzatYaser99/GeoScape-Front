@@ -1,0 +1,63 @@
+/*Start section*/
+
+$GreenColor: #86BB46;
+$box-shadow: 0px 9px 31.3px 0px rgba(82, 146, 39, 0.29);
+
+footer {
+  background-color: #222831;
+  border-top: 10px solid $GreenColor;
+  box-shadow:$box-shadow;
+}
+
+footer .contentOne {
+  text-align: center;
+}
+
+footer .contentOne h2 {
+  color: white;
+  font-size: 28px;
+}
+
+footer .contentOne h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .contentOne li {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+footer .contentOne li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .contentOne li a:hover {
+  color: $GreenColor;
+}
+
+footer .contentOne p {
+  color: white;
+}
+
+.contentOne a .pi {
+  transition: all .4s;
+}
+
+
+footer .contentTwo {
+  text-align: center;
+}
+
+.contentTwo p {
+  color: whitesmoke;
+}
+
+.contentTwo p .pi-heart-fill {
+  font-size: 15px;
+}
+
+/*End section*/

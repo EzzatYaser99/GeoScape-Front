@@ -1,0 +1,105 @@
+
+$GreenColor: #86BB46;
+$box-shadow: 0px 9px 31.3px 0px rgba(82, 146, 39, 0.29);
+
+//@import 'src/assets/scss/variable';
+
+.header-style{
+  border-top: 10px solid $GreenColor;
+  border-radius:6px 6px 0px 0px;
+  border-bottom: 5px solid $GreenColor;
+background:white;
+}
+
+:host ::ng-deep {
+
+  .p-menubar {
+    padding:0px 20px;
+    border: 0;
+    background-color: white;
+    //box-shadow: $box-shadow;
+    border-radius:0px
+  }
+
+  /* start refactor menu list */
+   .p-menubar-root-list {
+    margin-bottom: 0px;
+    //margin-left: 35px;
+  }
+
+   .p-menuitem-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+
+   .p-menubar-root-list .p-focus .p-menuitem-link {
+    border-bottom: 1.5px solid #86BB46;
+    box-shadow: 0px 4px 10.4px 0px #673a8e26;
+  }
+
+
+  .p-menubar-root-list
+  .p-focus
+  .p-menuitem-content:hover
+  .p-menuitem-link {
+    background-color: rgb(105 139 60 / 3%);;
+    border-bottom: 1.5px solid #86BB46;
+    box-shadow: $box-shadow;
+  }
+
+   .p-menubar-root-list .p-focus .p-menuitem-content {
+    background-color: rgb(105 139 60 / 3%);
+    border-bottom: 1.7px solid #86BB46;
+    box-shadow: $box-shadow;
+  }
+
+   .p-menuitem-content .active {
+    background-color: rgb(105 139 60 / 3%);
+    border-bottom: 2px solid #86BB46;
+    box-shadow: $box-shadow;
+  }
+
+   .p-menubar-root-list .p-menuitem-content:hover {
+    background-color: rgb(105 139 60 / 3%);
+    border-bottom: 2px solid #86BB46;
+    box-shadow: $box-shadow;
+  }
+
+
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-content {
+    border-radius: 0px;
+  }
+
+  .p-menubar .p-menubar-button {
+    margin-left: 25px;
+    position:absolute;
+    right:40px
+  }
+
+  //@media screen and (max-width: 960px) {
+  //  .p-menubar-root-list {
+  //    position: fixed;
+  //    left:0px;
+  //    top: 112px;
+  //    width: 100%;
+  //    padding:0px 32px;
+  //  }
+  //}
+
+}
+
+
+@media screen and (max-width: 960px) {
+  :host ::ng-deep {
+    .p-menuitem-link {
+padding:8px  ;
+    }
+
+  }
+}

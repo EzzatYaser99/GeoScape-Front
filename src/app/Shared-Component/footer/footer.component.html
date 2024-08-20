@@ -1,0 +1,45 @@
+  <footer class="pt-5 pb-0">
+      <div class="grid w-full mx-auto">
+        <div class="col-12 md:col-12 lg:col-4 ">
+          <div class="contentOne">
+            <h2>Contact Us</h2>
+            <ul class="p-0">
+              @for (item of contactDetailsInfo; track item) {
+                <li>
+                  <a  [href]="item.herf" target="{{(item.id ==3)? '_self': '_blank' }}">
+                    <i class="{{item.Icon}} mr-2 greenColor"></i>
+                    {{ item.Title }}</a>
+                </li>
+              }
+            </ul>
+            <span style="color:white; font-size: 24px" class="font-bold"> Follow Us </span>
+            <app-social-media-info></app-social-media-info>
+          </div>
+        </div>
+        <div class="col-12 md:col-12 lg:col-4 ">
+          <div class="contentOne">
+            <img class="bg-white border-round" src="assets/images/logo.png" width="100" height="100">
+            <p class="ml-md-4 mr-md-5 ml-sm-5 px-5 ">GEOSCAPE delivers top-tier professional landscape services that add here to
+              the highest quality standards, sourcing the finest products from both the Saudi Arabian and international
+              markets. Our comprehensive offerings include landscape design in both 2D and 3D, seamless installation,
+              and guaranteed satisfaction. Choose from a range of maintenance plans tailored to your specific requirements.</p>
+          </div>
+        </div>
+        <div class="col-12 md:col-12 lg:col-4 ">
+          <div class="contentOne">
+            <h2>Opening Days</h2>
+            <ul class="p-0">
+              @for (item of openDays; track item) {
+                <li>{{ item.openDays }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 md:col-12 lg:col-12">
+          <div class="contentTwo m-auto">
+            <p>© copyright 2024 ,All Rright reserved By GeoScape </p>
+            <p>© Distributed By <span class="greenColor" >GeoScape</span></p>
+          </div>
+        </div>
+      </div>
+  </footer>

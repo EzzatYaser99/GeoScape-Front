@@ -1,0 +1,74 @@
+<section class="carsoul-bg px-3 zoomin animation-duration-1000 animation-iteration-1"
+         style='background-image: url("assets/images/services/ourServices.jpg")'>
+
+  <p-carousel [className]="'zoomin animation-duration-2000 animation-iteration-1'"
+    [autoplayInterval]="5000" [circular]="true" [numScroll]="1" [numVisible]="1"
+    [responsiveOptions]="responsiveOptions"
+    [value]="services" class="" styleClass="custom-carousel">
+
+    <ng-template let-service pTemplate="item">
+      <div class="product-item
+       flex
+
+       justify-content-md-center
+       justify-content-sm-center">
+        <div class="product-item-content sm:w-5  m-auto">
+          <div class=" relative overflow-hidden">
+            <img height="" style="border:7px solid white" class="product-image" [src]="'assets/images/services/'+ service.image">
+          </div>
+          <div class="mt-4">
+            <h2>{{ service.name }}</h2>
+            <p class="text-white font-bold">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>
+
+<div class="my-5 zoomin animation-duration-2000 animation-iteration-1">
+  <p-fieldset>
+    <ng-template pTemplate="header">
+      <div class="flex align-items-center gap-1 px-2">
+        <p-avatar
+          [image]="'assets/images/logo.png'"
+          shape="circle"/>
+        <span class="font-bold">GEOSCAPE</span>
+      </div>
+    </ng-template>
+    <p class="m-0">
+      At GEOSCAPE, we provide comprehensive professional landscape services that meet
+      the highest standards of quality. We select only the best products from both the Saudi
+      Arabian and international markets. Our team designs your landscape area in both 2D and 3D,
+      ensuring precise and detailed plans. We handle the installation and offer a variety of
+      maintenance plans to suit your needs, guaranteeing all our services. </p>
+    <div class="grid w-full mx-auto mt-5">
+      @for (service of services; track service) {
+        <div class="col-12 sm:col-9 md:col-6 lg:col-4 xl:col-3 m-auto mb-3 ">
+          <div class="card flex justify-content-center">
+            <p-card header="{{ service.name }}">
+              <ng-template pTemplate="header">
+                <img alt="Card" [src]="'assets/images/services/'+ service.image"/>
+              </ng-template>
+              <p class="m-0" style="min-height: 145px;">
+                {{ service.description }}
+              </p>
+              <ng-template pTemplate="footer">
+                <div class="flex gap-3 mt-1">
+                  <button pButton label="Read More" class="w-full green-Bg-Color"
+                          (click)="navigateToServiceDetails(service)"></button>
+                </div>
+              </ng-template>
+            </p-card>
+          </div>
+        </div>
+      }
+
+
+    </div>
+
+  </p-fieldset>
+</div>
+
+
+

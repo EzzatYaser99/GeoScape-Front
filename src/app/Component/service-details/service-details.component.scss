@@ -1,0 +1,31 @@
+
+.appear-in-mobile{
+  display:none;
+}
+@media screen and (max-width: 770px) {
+    :host ::ng-deep {
+      .p-listbox-list {
+        max-height: 300px;
+      }
+    }
+  .gallery-product {
+    img {
+      height: 250px
+    }
+  }
+  .disappear-in-mobile{
+    display:none;
+  }
+  .appear-in-mobile{
+    display:unset;
+  }
+}
+
+:host ::ng-deep {
+  .p-galleria .p-galleria-item-nav {
+    width: 1rem;
+    height: 1rem;
+    color: white;
+    padding:10px;
+  }
+}

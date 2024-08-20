@@ -1,0 +1,17 @@
+.scrollbtn {
+  position: fixed;
+  bottom: calc(100vh - 99vh);
+  right: 10px;
+  z-index:5555555;
+}
+
+
+.scrollbtn i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: transparent;
+}

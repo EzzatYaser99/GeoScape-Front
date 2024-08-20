@@ -1,0 +1,91 @@
+.bg-image {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: 350px;
+  border-radius: 0px 0px 6px 6px;
+}
+
+/* Start fieldset Style*/
+:host ::ng-deep {
+  .p-fieldset .p-fieldset-legend {
+    padding: 6px;
+    background-color: unset;
+  }
+
+  .p-card .p-card-title {
+    font-size: .8rem
+  }
+
+  .p-card .p-card-content {
+    padding: 0px;
+  }
+
+}
+
+.appear-in-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  :host ::ng-deep {
+    .p-listbox-list {
+      max-height: 300px;
+    }
+  }
+  .disappear-in-mobile {
+    display: none;
+  }
+  .appear-in-mobile {
+    display: unset;
+  }
+  .gallery-product {
+    img {
+      height: 250px
+    }
+  }
+}
+
+:host ::ng-deep {
+  .p-image-toolbar {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    display: flex;
+    z-index: 10000000;
+  }
+
+  .p-galleria .p-galleria-item-nav {
+    width: 1rem;
+    height: 1rem;
+    color: black;
+    padding:10px;
+
+  }
+
+}
+
+.card {
+  transition: all .3s;
+
+  img {
+    border-radius: 10px 10px 0px 0px
+  }
+
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+
+:host ::ng-deep {
+  @media screen and (max-width: 990px) and (min-width: 570px) {
+    .trees .p-card .p-card-body {
+      min-height: 300px
+    }
+
+
+  }
+}
