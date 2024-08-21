@@ -1,6 +1,6 @@
 <div class="bg-image flex justify-content-center align-items-center
  zoomin animation-duration-1000 animation-iteration-1"
-     style='background-image: url("assets/images/projects-page/ourProjects2.png")'>
+     style='background-image: url("assets/images/projects-page/ourProjects.png")'>
   <div style="z-index: 100000;">
     <h2 class="text-center">Our Projects</h2>
     <h4 class="">" You can do anything you set your mind. "</h4>
@@ -14,7 +14,7 @@
         <p-avatar
           [image]="'assets/images/logo.png'"
           shape="circle"/>
-        <span class="font-bold">GEOSCAPE</span>
+        <span class="font-bold">GEOSCAPE PROJECTS</span>
       </div>
     </ng-template>
     <p class="m-0">
@@ -22,37 +22,98 @@
       across various sectors. Our expertise spans from residential communities to large-scale
       infrastructure projects. Below is a showcase of our recent and ongoing projects, reflecting
       our commitment to excellence and innovation.</p>
-
-    <div class="grid w-full mx-auto mt-5">
-      @for (project of projects; track project) {
-        <div class="col-12 sm:col-9 md:col-6 lg:col-4 xl:col-3 m-auto mb-3 ">
-          <div class="card flex justify-content-center">
-            <p-card header="">
-              <ng-template pTemplate="header">
-                <img alt="Card" [src]="'assets/images/services/'+ project.image"/>
-              </ng-template>
-
-              <span><p class="m-0 name-length"><span class="font-bold">Project : </span>{{ project.name }}<p></span>
-              <span><p class="m-0 name-length"><span class="font-bold">Scope of Work : </span>{{ project.scopeOfWork }}<p></span>
-              <span><p class="m-0"><span class="font-bold">Main Contractor : </span>{{ project.mainContractor }}</p></span>
-              <span><p class="m-0"><span class="font-bold">Consultant : </span>{{ project.consultant }}</p></span>
-              <span><p class="m-0"><span class="font-bold">Progress : </span>{{ project.progress }}</p></span>
-              <span><p class="m-0"><span class="font-bold">Status : </span>{{ project.status }}</p></span>
-              <span class="desc-length"><p class="m-0"><span class="font-bold">Description : </span>{{ project.description }}</p></span>
-              <ng-template pTemplate="footer">
-                <div class="flex gap-3 mt-1">
-                  <button pButton label="Read More" class="w-full"
-                          (click)="navigateToProjectDetails(project)"></button>
-                </div>
-              </ng-template>
-
-            </p-card>
+<div class="mt-5">
+    <p-tabView>
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center gap-2">
+            <p-avatar
+              [image]="'assets/images/projects-details/neom-projects/neom.jpg'"
+              shape="circle" />
+            <span class="font-bold white-space-nowrap m-0">
+                   Neom Projects
+                </span>
           </div>
+        </ng-template>
+        <div class="grid w-full mx-auto mt-5">
+          @for (project of neomProjects; track project) {
+            <div class="col-12 sm:col-9 md:col-6 lg:col-4 xl:col-3 m-auto mb-3 ">
+              <div class="card flex justify-content-center">
+                <p-card header="">
+                  <ng-template pTemplate="header">
+                    <img [alt]="project.image" [src]="'assets/images/projects-details/neom-projects/'+ project.image"/>
+                  </ng-template>
+
+                  <span><p class="m-0 name-length"><span class="font-bold">Project : </span>{{ project.name }}<p></span>
+                  <span><p class="m-0 name-length"><span class="font-bold">Scope of Work : </span>{{ project.scopeOfWork }}<p></span>
+                  <span><p class="m-0"><span class="font-bold">Main Contractor : </span>{{ project.mainContractor }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Consultant : </span>{{ project.consultant }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Progress : </span>{{ project.progress }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Status : </span>{{ project.status }}</p></span>
+                  <span class="desc-length"><p class="m-0"><span class="font-bold">Description : </span>{{ project.description }}</p></span>
+                  <ng-template pTemplate="footer">
+                    <div class="flex gap-3 mt-1">
+                      <button pButton label="Read More" class="w-full"
+                              (click)="navigateToProjectDetails(project)"></button>
+                    </div>
+                  </ng-template>
+
+                </p-card>
+              </div>
+            </div>
+          }
+
+
         </div>
-      }
+
+      </p-tabPanel>
+      <p-tabPanel >
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center gap-2">
+            <p-avatar
+              [image]="'assets/images/projects-details/riyadh-projects/riyadh.jpg'"
+              shape="circle" />
+            <span class="font-bold white-space-nowrap m-0">
+                  Riyadh Projects
+                </span>
+          </div>
+        </ng-template>
+        <div class="grid w-full mx-auto mt-5">
+          @for (project of riyadhProjects; track project) {
+            <div class="col-12 sm:col-9 md:col-6 lg:col-4 xl:col-3 m-auto mb-3 ">
+              <div class="card flex justify-content-center">
+                <p-card header="">
+                  <ng-template pTemplate="header">
+                    <img [alt]="project.image" [src]="'assets/images/projects-details/riyadh-projects/NRC1/'+ project.image"/>
+                  </ng-template>
+
+                  <span><p class="m-0 name-length"><span class="font-bold">Project : </span>{{ project.name }}<p></span>
+                  <span><p class="m-0 name-length"><span class="font-bold">Scope of Work : </span>{{ project.scopeOfWork }}<p></span>
+                  <span><p class="m-0"><span class="font-bold">Main Contractor : </span>{{ project.mainContractor }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Consultant : </span>{{ project.consultant }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Progress : </span>{{ project.progress }}</p></span>
+                  <span><p class="m-0"><span class="font-bold">Status : </span>{{ project.status }}</p></span>
+                  <span class="desc-length"><p class="m-0"><span class="font-bold">Description : </span>{{ project.description }}</p></span>
+                  <ng-template pTemplate="footer">
+                    <div class="flex gap-3 mt-1">
+                      <button pButton label="Read More" class="w-full"
+                              (click)="navigateToProjectDetails(project)"></button>
+                    </div>
+                  </ng-template>
+
+                </p-card>
+              </div>
+            </div>
+          }
 
 
-    </div>
+        </div>
+
+      </p-tabPanel>
+    </p-tabView>
+</div>
+
+
 
   </p-fieldset>
 </div>

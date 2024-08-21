@@ -5,6 +5,7 @@ import {PrimeTemplate} from "primeng/api";
 import {ButtonDirective} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {Router} from "@angular/router";
+import {TabViewModule} from "primeng/tabview";
 
 @Component({
   selector: 'app-projects',
@@ -14,18 +15,20 @@ import {Router} from "@angular/router";
     FieldsetModule,
     PrimeTemplate,
     ButtonDirective,
-    CardModule
+    CardModule,
+    TabViewModule
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit{
-  projects: any;
+  neomProjects: any;
+  riyadhProjects: any;
 constructor(private  _router:Router) {
-  this.projects = [
+  this.neomProjects = [
     {id: 1 ,
       name: 'NEOM Residential Community 1 (NRC 1)' ,
-      image:'',
+      image:'NRC1/nrc11.jpg',
       scopeOfWork:' Softscape, Hardscape, and Irrigation system',
       mainContractor:'Nesma & Partners',
       consultant:'Bechtel',
@@ -124,6 +127,42 @@ constructor(private  _router:Router) {
         ' of native trees to preserve the natural landscape. Geoscape successfully' +
         ' completed this task, ensuring that the environmental integrity of the area was maintained.'},
   ];
+  this.riyadhProjects = [
+    {id: 1 ,
+      name: 'NEOM Residential Community 1 (NRC 1)' ,
+      image:'riyadh-projects/.jpg',
+      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
+      mainContractor:'Nesma & Partners',
+      consultant:'Bechtel',
+      progress:'99.0%',
+      status:'Ongoing',
+      description:'This project involves the comprehensive landscaping and irrigation of a residential' +
+        ' community. It includes designing and implementing softscaping elements like grass, trees,' +
+        ' and shrubs, as well as hardscaping features such as pathways, patios, and other structures.' +
+        ' The irrigation system ensures sustainable water management.'},
+    {id: 2 ,
+      name: 'NEOM Residential Community 2 (NRC 2)' ,
+      image:'riyadh-projects/',
+      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
+      mainContractor:'Nesma & Partners',
+      consultant:'Bechtel',
+      progress:'95.0%',
+      status:'Ongoing',
+      description:'Similar to NRC 1, this project focuses on enhancing the landscape and irrigation' +
+        ' infrastructure of another residential community. Our team is creating aesthetically' +
+        ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.'},
+    {id: 3 ,
+      name: 'Infrastructure Package for Staff Accommodation (4200000151/001)' ,
+      image:'riyadh-projects/',
+      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
+      mainContractor:'PCC',
+      consultant:'AECOM',
+      progress:'10.0%',
+      status:'Ongoing',
+      description:'This project is aimed at improving the living conditions for staff through advanced ' +
+        'landscaping and irrigation solutions. It includes the creation of green spaces, ' +
+        'recreational areas, and efficient irrigation systems to support a comfortable living environment'}
+   ]
 
 }
   ngOnInit(): void {

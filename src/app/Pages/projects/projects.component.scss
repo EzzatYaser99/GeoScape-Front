@@ -40,3 +40,15 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.card {
+  transition: all .3s;
+  img{
+    border-radius:10px 10px 0px 0px
+  }
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+.p-card .p-card-body {
+  padding: 1rem;
+}
