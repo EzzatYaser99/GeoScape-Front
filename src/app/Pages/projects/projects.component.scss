@@ -52,3 +52,12 @@
 .p-card .p-card-body {
   padding: 1rem;
 }
+
+:host ::ng-deep {
+  .p-tabview .p-tabview-panels {
+    padding: 0px;
+  }
+  .p-tabview .p-tabview-nav li .p-tabview-nav-link{
+    padding:5px 10px;
+  }
+}

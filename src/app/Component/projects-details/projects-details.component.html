@@ -1,18 +1,20 @@
 
 <div class="my-5">
 <p-card  header=" " *ngIf="selectedProject">
-  <span><p class="m-0 name-length"><span class="font-bold">Project : </span>{{ selectedProject.name }}<p></span>
+  <div>
+  <span><p class="m-0 name-length"><span class="font-bold">Project Name:
+  </span>{{ selectedProject.name }}<p></span>
   <span><p class="m-0 name-length"><span class="font-bold">Scope of Work : </span>{{ selectedProject.scopeOfWork }}<p></span>
   <span><p class="m-0"><span class="font-bold">Main Contractor : </span>{{ selectedProject.mainContractor }}</p></span>
   <span><p class="m-0"><span class="font-bold">Consultant : </span>{{ selectedProject.consultant }}</p></span>
   <span><p class="m-0"><span class="font-bold">Progress : </span>{{ selectedProject.progress }}</p></span>
   <span><p class="m-0"><span class="font-bold">Status : </span>{{ selectedProject.status }}</p></span>
   <span class="desc-length"><p class="m-0"><span class="font-bold">Description : </span>{{ selectedProject.description }}</p></span>
-
   <span><p class="m-0"><span class="font-bold">Images : </span></p></span>
-  <div *ngIf="selectedProject">
+  </div>
+  <div class="zoomin animation-duration-2000 animation-iteration-1" *ngIf="selectedProject">
     <div class="flex flex-wrap m-auto justify-content-center">
-      <div *ngFor="let item of selectedProject.subImages" class="m-3">
+      <div *ngFor="let item of selectedProject.subImages" class="m-3 zoomin  animation-duration-3000 animation-iteration-1 ">
         <p-image
           [src]="'assets/images/projects-details/'+ item?.image"
           alt="Image"

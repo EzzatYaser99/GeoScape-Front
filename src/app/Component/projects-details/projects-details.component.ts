@@ -33,7 +33,7 @@ export class ProjectsDetailsComponent implements OnInit {
     this.projects = [
       {id: 1 ,
         name: 'NEOM Residential Community 1 (NRC 1)' ,
-        image:'neom-projects/NRC1/nrc11.jpg',
+        image:'neom-projects/NRC1/nrc-1.jpg',
         scopeOfWork:' Softscape, Hardscape, and Irrigation system',
         mainContractor:'Nesma & Partners',
         consultant:'Bechtel',
@@ -44,14 +44,14 @@ export class ProjectsDetailsComponent implements OnInit {
           ' and shrubs, as well as hardscaping features such as pathways, patios, and other structures.' +
           ' The irrigation system ensures sustainable water management.',
       subImages: [
-      {id: 1, image: 'neom-projects/NRC1/nrc11.jpg'},
-      {id: 2, image: 'neom-projects/NRC1/nrc12.jpg'},
-      {id: 3, image: 'neom-projects/NRC1/nrc13.jpg'},
-      {id: 4, image: 'neom-projects/NRC1/nrc14.jpg'},
-      {id: 5, image: 'neom-projects/NRC1/nrc15.jpg'},
-      {id: 6, image: 'neom-projects/NRC1/nrc16.jpg'},
-      {id: 6, image: 'neom-projects/NRC1/nrc17.jpg'},
-      {id: 6, image: 'neom-projects/NRC1/nrc18.jpg'},
+      {id: 1, image: 'neom-projects/NRC1/nrc-1.jpg'},
+      {id: 2, image: 'neom-projects/NRC1/nrc-2.jpg'},
+      {id: 3, image: 'neom-projects/NRC1/nrc-3.jpg'},
+      {id: 4, image: 'neom-projects/NRC1/nrc-4.jpg'},
+      {id: 5, image: 'neom-projects/NRC1/nrc-5.jpg'},
+      {id: 6, image: 'neom-projects/NRC1/nrc-6.jpg'},
+      {id: 6, image: 'neom-projects/NRC1/nrc-7.jpg'},
+      {id: 6, image: 'neom-projects/NRC1/nrc-8.jpg'},
 
     ]},
       {id: 2 ,
@@ -142,6 +142,82 @@ export class ProjectsDetailsComponent implements OnInit {
         description:'As part of the ambitious NEOM project, The LINE required the transplantation' +
           ' of native trees to preserve the natural landscape. Geoscape successfully' +
           ' completed this task, ensuring that the environmental integrity of the area was maintained.'},
+      {id: 10 ,
+        name: 'Infrastructure and Public Buildings on Prince Mohammad Bin Salman Road – Phase 1 Section 2 ' +
+          '(Package 2B) of the Sports Boulevard Project in Riyadh City (Cycle Bridge)' ,
+        image:'riyadh-projects/cycle-bridge/cycle-bridge-1.jpeg',
+        scopeOfWork:' Softscape and Irrigation system',
+        mainContractor:'Freyssinet',
+        consultant:'IDOM',
+        progress:'99.0%',
+        status:'Ongoing',
+        description:'This project involves the comprehensive landscaping and irrigation of a residential' +
+          ' community. It includes designing and implementing softscaping elements like grass, trees,' +
+          ' and shrubs, as well as hardscaping features such as pathways, patios, and other structures.' +
+          ' The irrigation system ensures sustainable water management.',
+        subImages: [
+          {id: 1, image: 'riyadh-projects/cycle-bridge/cycle-bridge-1.jpeg'},
+          {id: 2, image: 'riyadh-projects/cycle-bridge/cycle-bridge-2.jpeg'},
+          {id: 3, image: 'riyadh-projects/cycle-bridge/cycle-bridge-3.jpeg'},
+          {id: 4, image: 'riyadh-projects/cycle-bridge/cycle-bridge-4.jpeg'},
+          {id: 5, image: 'riyadh-projects/cycle-bridge/cycle-bridge-5.jpeg'},
+          {id: 6, image: 'riyadh-projects/cycle-bridge/cycle-bridge-6.jpeg'},
+          {id: 7, image: 'riyadh-projects/cycle-bridge/cycle-bridge-7.jpeg'},
+          {id: 8, image: 'riyadh-projects/cycle-bridge/cycle-bridge-8.jpeg'},
+
+
+
+        ]
+
+      },
+      {
+        id: 11,
+        name: 'Roads, Infrastructure and Public Buildings on Zones 3, 4 & 5 of the Arts District (F3) -' +
+          ' Works executed in Wadi Hanifah areas as part of POD18 of the Sports Boulevard Project in ' +
+          'Riyadh City',
+        image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-7.jpeg',
+        scopeOfWork: ' Softscape and Irrigation system',
+        mainContractor: 'Freyssinet',
+        consultant: 'IDOM',
+        progress: '80.0%',
+        status: 'Ongoing',
+        description: ' This project focuses on enhancing the landscape in the Arts District of Riyadh, specifically within the Wadi Hanifah' +
+          ' areas. Our work includes the softscaping of green areas and the implementation of efficient irrigation systems to support the' +
+          ' city\'s environmental and aesthetic goals',
+        subImages: [
+          {id: 1, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-1.jpeg'},
+          {id: 2, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-2.jpeg'},
+          {id: 3, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-3.jpeg'},
+          {id: 4, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-4.jpeg'},
+          {id: 5, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-5.jpeg'},
+          {id: 6, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-6.jpeg'},
+          {id: 7, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-7.jpeg'},
+          {id: 8, image: 'riyadh-projects/wadi-hanifa/wadi-hanifa-8.jpeg'},
+        ]
+      },
+      {id: 12 ,
+        name: 'Ministry of Finance' ,
+        image:'riyadh-projects/ministry-of-finance/ministry-of-finance-1.jpeg',
+        scopeOfWork:'Softscape and Irrigation system',
+        mainContractor:'Ministry of Finance',
+        consultant:'Ministry of Finance',
+        progress:'70.0%',
+        status:'Ongoing',
+        description:
+          'Geoscape is tasked with the landscaping and irrigation work for the ' +
+          'Ministry of Finance\'s premises. This project aims to create a serene ' +
+          'and well-maintained environment that reflects the prestige of the ministry' +
+          ' while ensuring sustainable water usage through advanced irrigation techniques.',
+        subImages: [
+          {id: 1, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-1.jpeg'},
+          {id: 2, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-2.jpeg'},
+          {id: 3, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-3.jpeg'},
+          {id: 4, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-4.jpeg'},
+          {id: 5, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-5.jpeg'},
+          {id: 6, image: 'riyadh-projects/ministry-of-finance/ministry-of-finance-6.jpeg'},
+        ]
+      }
+
     ];
   }
 

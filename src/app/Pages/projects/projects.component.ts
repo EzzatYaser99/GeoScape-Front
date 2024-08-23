@@ -28,7 +28,7 @@ constructor(private  _router:Router) {
   this.neomProjects = [
     {id: 1 ,
       name: 'NEOM Residential Community 1 (NRC 1)' ,
-      image:'NRC1/nrc11.jpg',
+      image:'NRC1/nrc-1.jpg',
       scopeOfWork:' Softscape, Hardscape, and Irrigation system',
       mainContractor:'Nesma & Partners',
       consultant:'Bechtel',
@@ -128,40 +128,46 @@ constructor(private  _router:Router) {
         ' completed this task, ensuring that the environmental integrity of the area was maintained.'},
   ];
   this.riyadhProjects = [
-    {id: 1 ,
-      name: 'NEOM Residential Community 1 (NRC 1)' ,
-      image:'riyadh-projects/.jpg',
-      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
-      mainContractor:'Nesma & Partners',
-      consultant:'Bechtel',
+    {id: 10 ,
+      name: 'Infrastructure and Public Buildings on Prince Mohammad Bin Salman Road – Phase 1 Section 2 ' +
+        '(Package 2B) of the Sports Boulevard Project in Riyadh City (Cycle Bridge)' ,
+      image:'cycle-bridge/cycle-bridge-1.jpeg',
+      scopeOfWork:' Softscape and Irrigation system',
+      mainContractor:'Freyssinet',
+      consultant:'IDOM',
       progress:'99.0%',
       status:'Ongoing',
       description:'This project involves the comprehensive landscaping and irrigation of a residential' +
         ' community. It includes designing and implementing softscaping elements like grass, trees,' +
         ' and shrubs, as well as hardscaping features such as pathways, patios, and other structures.' +
         ' The irrigation system ensures sustainable water management.'},
-    {id: 2 ,
-      name: 'NEOM Residential Community 2 (NRC 2)' ,
-      image:'riyadh-projects/',
-      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
-      mainContractor:'Nesma & Partners',
-      consultant:'Bechtel',
-      progress:'95.0%',
+    {id: 11 ,
+      name: 'Roads, Infrastructure and Public Buildings on Zones 3, 4 & 5 of the Arts District (F3) -' +
+        ' Works executed in Wadi Hanifah areas as part of POD18 of the Sports Boulevard Project in ' +
+        'Riyadh City' ,
+      image:'wadi-hanifa/wadi-hanifa-7.jpeg',
+      scopeOfWork:' Softscape and Irrigation system',
+      mainContractor:'Freyssinet',
+      consultant:'IDOM',
+      progress:'80.0%',
       status:'Ongoing',
-      description:'Similar to NRC 1, this project focuses on enhancing the landscape and irrigation' +
-        ' infrastructure of another residential community. Our team is creating aesthetically' +
-        ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.'},
-    {id: 3 ,
-      name: 'Infrastructure Package for Staff Accommodation (4200000151/001)' ,
-      image:'riyadh-projects/',
-      scopeOfWork:' Softscape, Hardscape, and Irrigation system',
-      mainContractor:'PCC',
-      consultant:'AECOM',
-      progress:'10.0%',
+      description:' This project focuses on enhancing the landscape in the Arts District of Riyadh, specifically within the Wadi Hanifah' +
+        ' areas. Our work includes the softscaping of green areas and the implementation of efficient irrigation systems to support the' +
+        ' city\'s environmental and aesthetic goals'},
+    {id: 12 ,
+      name: 'Ministry of Finance' ,
+      image:'ministry-of-finance/ministry-of-finance-1.jpeg',
+      scopeOfWork:'Softscape and Irrigation system',
+      mainContractor:'Ministry of Finance',
+      consultant:'Ministry of Finance',
+      progress:'70.0%',
       status:'Ongoing',
-      description:'This project is aimed at improving the living conditions for staff through advanced ' +
-        'landscaping and irrigation solutions. It includes the creation of green spaces, ' +
-        'recreational areas, and efficient irrigation systems to support a comfortable living environment'}
+      description:
+        'Geoscape is tasked with the landscaping and irrigation work for the ' +
+        'Ministry of Finance\'s premises. This project aims to create a serene ' +
+        'and well-maintained environment that reflects the prestige of the ministry' +
+        ' while ensuring sustainable water usage through advanced irrigation techniques.'
+    }
    ]
 
 }
