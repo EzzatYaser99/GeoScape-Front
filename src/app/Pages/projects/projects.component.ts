@@ -95,7 +95,7 @@ constructor(private  _router:Router) {
         'in a manner that preserved their health and supported the overall environmental goals of the project.'},
     {id: 7 ,
       name: 'Sindalah Island – Marina Promenade & Utility Backbone (000001020/147)' ,
-      image:'',
+      image:'sindalah-island/sindalah-island-1.JPG',
       scopeOfWork:'Softscape and Irrigation system',
       mainContractor:'Nesma & Partners',
       consultant:'AECOM',

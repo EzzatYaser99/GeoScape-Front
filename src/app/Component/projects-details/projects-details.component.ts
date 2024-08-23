@@ -50,8 +50,8 @@ export class ProjectsDetailsComponent implements OnInit {
       {id: 4, image: 'neom-projects/NRC1/nrc-4.jpg'},
       {id: 5, image: 'neom-projects/NRC1/nrc-5.jpg'},
       {id: 6, image: 'neom-projects/NRC1/nrc-6.jpg'},
-      {id: 6, image: 'neom-projects/NRC1/nrc-7.jpg'},
-      {id: 6, image: 'neom-projects/NRC1/nrc-8.jpg'},
+      {id: 7, image: 'neom-projects/NRC1/nrc-7.jpg'},
+      {id: 8, image: 'neom-projects/NRC1/nrc-8.jpg'},
 
     ]},
       {id: 2 ,
@@ -111,7 +111,7 @@ export class ProjectsDetailsComponent implements OnInit {
           'in a manner that preserved their health and supported the overall environmental goals of the project.'},
       {id: 7 ,
         name: 'Sindalah Island – Marina Promenade & Utility Backbone (000001020/147)' ,
-        image:'',
+        image:'neom-projects/sindalah-island/sindalah-island-1.JPG',
         scopeOfWork:'Softscape and Irrigation system',
         mainContractor:'Nesma & Partners',
         consultant:'AECOM',
@@ -119,7 +119,19 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Ongoing',
         description:' This project is focused on developing the marina promenade. It includes ' +
           'extensive softscaping and the installation of' +
-          ' an advanced irrigation system to ensure the maintenance of lush, green landscapes.'},
+          ' an advanced irrigation system to ensure the maintenance of lush, green landscapes.',
+        subImages: [
+          {id: 1, image: 'neom-projects/sindalah-island/sindalah-island-1.JPG'},
+          {id: 2, image: 'neom-projects/sindalah-island/sindalah-island-2.JPG'},
+          {id: 3, image: 'neom-projects/sindalah-island/sindalah-island-3.JPG'},
+          {id: 4, image: 'neom-projects/sindalah-island/sindalah-island-4.JPG'},
+          {id: 5, image: 'neom-projects/sindalah-island/sindalah-island-5.JPG'},
+          {id: 6, image: 'neom-projects/sindalah-island/sindalah-island-6.JPG'},
+          {id: 7, image: 'neom-projects/sindalah-island/sindalah-island-7.JPG'},
+          {id: 8, image: 'neom-projects/sindalah-island/sindalah-island-8.JPG'},
+
+
+        ]},
       {id: 8 ,
         name: 'Sindalah Island – Cluster 1' ,
         image:'',
