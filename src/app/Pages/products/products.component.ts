@@ -8,21 +8,23 @@ import {ListboxModule} from "primeng/listbox";
 import {GalleriaModule} from "primeng/galleria";
 import {ImageModule} from "primeng/image";
 import {FormsModule} from "@angular/forms";
+import {TabViewModule} from "primeng/tabview";
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [
-    AvatarModule,
-    FieldsetModule,
-    PrimeTemplate,
-    ButtonDirective,
-    CardModule,
-    ListboxModule,
-    GalleriaModule,
-    ImageModule,
-    FormsModule
-  ],
+    imports: [
+        AvatarModule,
+        FieldsetModule,
+        PrimeTemplate,
+        ButtonDirective,
+        CardModule,
+        ListboxModule,
+        GalleriaModule,
+        ImageModule,
+        FormsModule,
+        TabViewModule
+    ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
