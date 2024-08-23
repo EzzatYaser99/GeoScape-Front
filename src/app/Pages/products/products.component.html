@@ -13,20 +13,20 @@
    </span>
       </div>
     </ng-template>
-    <p class="m-0">
-      At GeoScape Co, we offer a diverse selection of plants and trees suitable for various landscaping
-      and urban beautification projects. Our nursery includes</p>
-    <div class="mt-5">
+    <div class="mt-2">
       <p-tabView>
         <p-tabPanel>
           <ng-template pTemplate="header">
             <div class="flex align-items-center gap-2">
               <span class="font-bold white-space-nowrap m-0">
-                   Plants <i class="fa-solid fa-plant-wilt greenColor"></i>
+                   Plants <i class="fa-solid fa-plant-wilt greenColor ml-1"></i>
                 </span>
             </div>
           </ng-template>
-          <div class="grid w-full mx-auto mt-5">
+          <p class="m-0 my-4" >
+            At GeoScape Co, we offer a diverse selection of plants suitable for various landscaping
+            and urban beautification projects. Our nursery includes .</p>
+          <div class="grid w-full mx-auto ">
             @for (plant of plants; track plant) {
               <div class="sm:col-6 md:col-4 lg:col-4 xl:col-3 m-auto mb-3">
                 <div class="card flex justify-content-center">
@@ -49,11 +49,14 @@
           <ng-template pTemplate="header">
             <div class="flex align-items-center gap-2">
               <span class="font-bold white-space-nowrap m-0">
-                 Trees <i class="fa-solid fa-tree greenColor"></i>
+                 Trees <i class="fa-solid fa-tree greenColor ml-1"></i>
                 </span>
             </div>
           </ng-template>
-          <div class="grid w-full mx-auto mt-5 trees">
+          <p class="m-0 my-4">
+            At GeoScape Co, we offer a diverse selection of trees suitable for various landscaping
+            and urban beautification projects. Our nursery includes.</p>
+          <div class="grid w-full mx-auto  trees">
             @for (tree of geoscapeTrees; track tree) {
               <div class="sm:col-6 md:col-4 lg:col-4 xl:col-3 m-auto mb-3">
                 <div class="card flex justify-content-center">
@@ -75,94 +78,95 @@
           </div>
 
         </p-tabPanel>
+
+
+        <p-tabPanel>
+          <ng-template pTemplate="header">
+            <div class="flex align-items-center gap-1">
+              <span class="font-bold white-space-nowrap m-0">
+                 BENITO Urban <i class="fa-solid fa-couch greenColor ml-1"></i>
+                </span>
+            </div>
+          </ng-template>
+          <p class="m-0 mt-4">We are excited to introduce our esteemed partner, BENITO Urban. BENITO Urban is a renowned
+            leader in urban furniture, playgrounds and outdoor fitness solutions. Their commitment to
+            innovation, quality, and sustainability aligns perfectly with our values and mission.</p>
+          <div class="grid w-full mx-auto">
+            <div class="col-12 md:col-4 appear-in-mobile ">
+              <div class="lg:w-10 w-12 m-auto ">
+                <h3>Benito Products</h3>
+                <p-listbox
+                  [filter]="true"
+                  [options]="benitoProducts"
+                  [(ngModel)]="selectedBenitoProduct"
+                  optionLabel="name"
+                  [style]="{ width: '100%' }"
+                  [listStyle]="{'max-height': '400px'}"
+                >
+                  <ng-template let-product pTemplate="item">
+                    <div class="flex align-items-center gap-2">
+                      <div>{{ product.name }}</div>
+                    </div>
+                  </ng-template>
+                </p-listbox>
+              </div>
+            </div>
+
+            <div class="col-12  md:col-7 mt-3 md:mt-7 gallery-product">
+              <div class="w-12 m-auto ">
+                <p-galleria
+                  [value]="selectedBenitoProduct?.subImages || benitoProducts[0].subImages "
+                  [showItemNavigators]="true"
+                  [responsiveOptions]="responsiveOptions"
+                  [containerStyle]="{ 'max-width': '100%' }"
+                  [numVisible]="3">
+                  <ng-template pTemplate="item" let-item>
+                    <img class="w-full" [style.border-radius]="'10px 10px 0px 0px '" [style.border]="'2px solid #86BB46'"
+                         [src]="'assets/images/products-page/benito-products/'+ item.imageSrc"
+                         alt="Image"
+                         width="100%" height="400">
+                  </ng-template>
+                  <ng-template pTemplate="thumbnail" let-item>
+                    <div class="grid w-full mx-auto  grid-nogutter justify-content-center">
+                      <img [src]="'assets/images/products-page/benito-products/'+ item.imageSrc" style="width:100px; height:60px;"/>
+                    </div>
+                  </ng-template>
+                </p-galleria>
+              </div>
+              <div><p>{{ selectedBenitoProduct?.description || benitoProducts[0].description }}</p></div>
+            </div>
+
+            <div class="col-12 md:col-5 disappear-in-mobile ">
+              <div class="lg:w-10 w-12 m-auto ">
+                <h3>Benito Products</h3>
+                <p-listbox
+                  [filter]="true"
+                  [options]="benitoProducts"
+                  [(ngModel)]="selectedBenitoProduct"
+                  optionLabel="name"
+                  [style]="{ width: '100%' }"
+                  [listStyle]="{'max-height': '450px'}">
+                  <ng-template let-service pTemplate="item">
+                    <div class="flex align-items-center gap-2">
+                      <div>{{ service.name }}</div>
+                    </div>
+                  </ng-template>
+                </p-listbox>
+              </div>
+            </div>
+
+
+          </div>
+
+        </p-tabPanel>
+
+
       </p-tabView>
     </div>
 
   </p-fieldset>
 </div>
 
-<div class="my-4">
-  <p-fieldset>
-    <ng-template pTemplate="header">
-      <div class="flex align-items-center gap-1 px-2">
-        <p-avatar
-          [image]="'assets/images/benito-logo.jpg'"
-          shape="square"/>
-        <span class="font-bold"> BENITO Urban </span>
-      </div>
-    </ng-template>
-
-    <p class="m-0">We are excited to introduce our esteemed partner, BENITO Urban. BENITO Urban is a renowned
-      leader in urban furniture, playgrounds and outdoor fitness solutions. Their commitment to
-      innovation, quality, and sustainability aligns perfectly with our values and mission.</p>
-    <div class="grid w-full mx-auto">
-      <div class="col-12 md:col-4 appear-in-mobile ">
-        <div class="lg:w-10 w-12 m-auto ">
-          <h3>Benito Products</h3>
-          <p-listbox
-            [filter]="true"
-            [options]="benitoProducts"
-            [(ngModel)]="selectedBenitoProduct"
-            optionLabel="name"
-            [style]="{ width: '100%' }"
-            [listStyle]="{'max-height': '400px'}"
-          >
-            <ng-template let-product pTemplate="item">
-              <div class="flex align-items-center gap-2">
-                <div>{{ product.name }}</div>
-              </div>
-            </ng-template>
-          </p-listbox>
-        </div>
-      </div>
-
-      <div class="col-12  md:col-7 mt-3 md:mt-7 gallery-product">
-        <div class="w-12 m-auto ">
-          <p-galleria
-            [value]="selectedBenitoProduct?.subImages || benitoProducts[0].subImages "
-            [showItemNavigators]="true"
-            [responsiveOptions]="responsiveOptions"
-            [containerStyle]="{ 'max-width': '100%' }"
-            [numVisible]="3">
-            <ng-template pTemplate="item" let-item>
-              <img class="w-full" [style.border-radius]="'10px 10px 0px 0px '" [style.border]="'2px solid #86BB46'"
-                   [src]="'assets/images/products-page/benito-products/'+ item.imageSrc"
-                   alt="Image"
-                   width="100%" height="400">
-            </ng-template>
-            <ng-template pTemplate="thumbnail" let-item>
-              <div class="grid w-full mx-auto  grid-nogutter justify-content-center">
-                <img [src]="'assets/images/products-page/benito-products/'+ item.imageSrc" style="width:100px; height:60px;"/>
-              </div>
-            </ng-template>
-          </p-galleria>
-        </div>
-        <div><p>{{ selectedBenitoProduct?.description || benitoProducts[0].description }}</p></div>
-      </div>
-
-      <div class="col-12 md:col-5 disappear-in-mobile ">
-        <div class="lg:w-10 w-12 m-auto ">
-          <h3>Benito Products</h3>
-          <p-listbox
-            [filter]="true"
-            [options]="benitoProducts"
-            [(ngModel)]="selectedBenitoProduct"
-            optionLabel="name"
-            [style]="{ width: '100%' }"
-            [listStyle]="{'max-height': '450px'}">
-            <ng-template let-service pTemplate="item">
-              <div class="flex align-items-center gap-2">
-                <div>{{ service.name }}</div>
-              </div>
-            </ng-template>
-          </p-listbox>
-        </div>
-      </div>
-
-
-    </div>
-  </p-fieldset>
-</div>
 
 
 
