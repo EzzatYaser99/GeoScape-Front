@@ -64,7 +64,18 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Ongoing',
         description:'Similar to NRC 1, this project focuses on enhancing the landscape and irrigation' +
           ' infrastructure of another residential community. Our team is creating aesthetically' +
-          ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.'},
+          ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.',subImages: [
+          {id: 1, image: 'neom-projects/NRC2/nrc-1.jpg'},
+          {id: 2, image: 'neom-projects/NRC2/nrc-2.jpg'},
+          {id: 3, image: 'neom-projects/NRC2/nrc-3.jpg'},
+          {id: 4, image: 'neom-projects/NRC2/nrc-4.jpg'},
+          {id: 5, image: 'neom-projects/NRC2/nrc-5.jpg'},
+          {id: 6, image: 'neom-projects/NRC2/nrc-6.jpg'},
+          {id: 7, image: 'neom-projects/NRC2/nrc-7.jpg'},
+          {id: 8, image: 'neom-projects/NRC2/nrc-8.jpg'},
+          {id: 9, image: 'neom-projects/NRC2/nrc-9.jpg'},
+
+        ]},
       {id: 3 ,
         name: 'Infrastructure Package for Staff Accommodation (4200000151/001)' ,
         image:'',

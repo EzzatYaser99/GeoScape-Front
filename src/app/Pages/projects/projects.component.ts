@@ -40,7 +40,7 @@ constructor(private  _router:Router) {
         ' The irrigation system ensures sustainable water management.'},
     {id: 2 ,
       name: 'NEOM Residential Community 2 (NRC 2)' ,
-      image:'',
+      image:'NRC2/nrc-5.jpg',
       scopeOfWork:' Softscape, Hardscape, and Irrigation system',
       mainContractor:'Nesma & Partners',
       consultant:'Bechtel',
