@@ -64,7 +64,8 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Ongoing',
         description:'Similar to NRC 1, this project focuses on enhancing the landscape and irrigation' +
           ' infrastructure of another residential community. Our team is creating aesthetically' +
-          ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.',subImages: [
+          ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.',
+        subImages: [
           {id: 1, image: 'neom-projects/NRC2/nrc-1.jpg'},
           {id: 2, image: 'neom-projects/NRC2/nrc-2.jpg'},
           {id: 3, image: 'neom-projects/NRC2/nrc-3.jpg'},
@@ -97,7 +98,20 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Completed',
         description:'This project involved the transplanting of native trees as part of the early works for ' +
           'road construction. The aim was to preserve the local flora while facilitating the development' +
-          ' of new infrastructure.'},
+          ' of new infrastructure.',
+        subImages: [
+          {id: 1, image: 'neom-projects/wo49/wo49-1.jpg'},
+          {id: 2, image: 'neom-projects/wo49/wo49-2.jpg'},
+          {id: 3, image: 'neom-projects/wo49/wo49-3.jpg'},
+          {id: 4, image: 'neom-projects/wo49/wo49-4.jpg'},
+          {id: 5, image: 'neom-projects/wo49/wo49-5.jpg'},
+          {id: 6, image: 'neom-projects/wo49/wo49-6.jpg'},
+          {id: 7, image: 'neom-projects/wo49/wo49-7.jpg'},
+          {id: 8, image: 'neom-projects/wo49/wo49-8.jpg'},
+          {id: 9, image: 'neom-projects/wo49/wo49-9.jpg'},
+          {id: 10, image: 'neom-projects/wo49/wo49-10.jpg'},
+
+        ]},
       {id: 5 ,
         name: 'Oxagon to Red Desert Early Works Construction of Access Roads Package 2 (WO#50)' ,
         image:'',
@@ -108,7 +122,25 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Completed',
         description:' Following the success of Package 1, this project continued the effort to transplant' +
           ' native trees during the construction of access roads. The focus was on minimizing environmental ' +
-          'impact while enabling essential infrastructure development.'},
+          'impact while enabling essential infrastructure development.',
+        subImages: [
+          {id: 1, image: 'neom-projects/wo50/wo50-1.jpg'},
+          {id: 2, image: 'neom-projects/wo50/wo50-2.jpg'},
+          {id: 3, image: 'neom-projects/wo50/wo50-3.jpg'},
+          {id: 4, image: 'neom-projects/wo50/wo50-4.jpg'},
+          {id: 5, image: 'neom-projects/wo50/wo50-5.jpg'},
+          {id: 6, image: 'neom-projects/wo50/wo50-6.jpg'},
+          {id: 7, image: 'neom-projects/wo50/wo50-7.jpg'},
+          {id: 8, image: 'neom-projects/wo50/wo50-8.jpg'},
+          {id: 9, image: 'neom-projects/wo50/wo50-9.jpg'},
+          {id: 10, image: 'neom-projects/wo50/wo50-10.jpg'},
+          {id: 11, image: 'neom-projects/wo50/wo50-10.jpg'},
+          {id: 12, image: 'neom-projects/wo50/wo50-10.jpg'},
+          {id: 13, image: 'neom-projects/wo50/wo50-10.jpg'},
+          {id: 14, image: 'neom-projects/wo50/wo50-10.jpg'},
+          {id: 15, image: 'neom-projects/wo50/wo50-10.jpg'},
+
+        ]},
       {id: 6 ,
         name: 'Advanced Enabling Works (Phase 1) (WO#53)' ,
         image:'',
