@@ -51,7 +51,7 @@ constructor(private  _router:Router) {
         ' pleasing and functional outdoor spaces that contribute to the overall well-being of the residents.'},
     {id: 3 ,
       name: 'Infrastructure Package for Staff Accommodation (4200000151/001)' ,
-      image:'',
+      image:'infrastructure-package/work-in-progress.png',
       scopeOfWork:' Softscape, Hardscape, and Irrigation system',
       mainContractor:'PCC',
       consultant:'AECOM',

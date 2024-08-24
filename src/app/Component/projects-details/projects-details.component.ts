@@ -87,7 +87,10 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Ongoing',
         description:'This project is aimed at improving the living conditions for staff through advanced ' +
           'landscaping and irrigation solutions. It includes the creation of green spaces, ' +
-          'recreational areas, and efficient irrigation systems to support a comfortable living environment'},
+          'recreational areas, and efficient irrigation systems to support a comfortable living environment',
+        subImages: [
+          {id: 1, image: 'neom-projects/infrastructure-package/work-in-progress.png'},
+        ]},
       {id: 4 ,
         name: 'Oxagon to Red Desert Early Works Roads Package 1 (WO#49)' ,
         image:'',
