@@ -77,12 +77,14 @@ zoomin animation-duration-1000 animation-iteration-1"
       </div>
     </ng-template>
       <div class="grid w-full mx-auto mt-5">
-        @for (document of documents.slice(1, 6); track document) {
-          <div class="col-6 sm:col-4  md:col-2 lg:col-2 m-auto">
-            <div class="approvals text-center">
+        @for (document of documents.slice(1, 10); track document) {
+          <div class="flex flex-wrap m-auto justify-content-center">
+            <div class="approvals text-center m-3 zoomin  animation-duration-1000 animation-iteration-1 ">
 
               <a target="_self" [routerLink]="'/main/uploadPdf/'+document.id"><img
-                class="block m-auto" [src]="'assets/document-approvals/'+ document.imgSrc" width="100%" alt="{{ document.name }}">
+                width="250"
+                height="300"
+                class="block m-auto" [src]="'assets/document-approvals/'+ document.imgSrc" alt="{{ document.name }}">
               </a>
 
               <a class="block mt-4" target="_self" [routerLink]="'/main/uploadPdf/'+document.id"> {{ document.name }}
@@ -90,6 +92,8 @@ zoomin animation-duration-1000 animation-iteration-1"
               </a>
             </div>
           </div>
+
+
         }
 
       </div>

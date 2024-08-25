@@ -36,6 +36,18 @@ export class UploadedPdfComponent implements OnInit {
       {
         id: 6, name: 'misk city ', pdfSrc: 'misk-city.pdf',imgSrc: 'misk-city.png'
       },
+      {
+        id: 7, name: 'WA0025', pdfSrc: 'WA0025.pdf',imgSrc: 'WA0025.PNG'
+      },
+      {
+        id: 8, name: 'MAT-000057_02', pdfSrc: 'MAT-000057.pdf',imgSrc: 'MAT-000057.PNG'
+      },
+      {
+        id: 9, name: 'GR-AUP-PQD-LAN-PLA', pdfSrc: 'GR-AUP-PQD-LAN-PLA.pdf',imgSrc: 'GR-AUP-PQD-LAN-PLA.PNG'
+      },
+      {
+        id: 10, name: 'GR-AUP-MAT-LAN', pdfSrc: 'GR-AUP-MAT-LAN.pdf',imgSrc: 'GR-AUP-MAT-LAN.PNG'
+      },
 
     ];
 
