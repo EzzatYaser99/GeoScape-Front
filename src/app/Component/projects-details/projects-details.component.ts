@@ -154,7 +154,18 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Completed',
         description:'This project involved advanced enabling works that required the careful ' +
           'transplantation of native trees. Our team ensured that the trees were moved and replanted ' +
-          'in a manner that preserved their health and supported the overall environmental goals of the project.'},
+          'in a manner that preserved their health and supported the overall environmental goals of the project.',
+        subImages: [
+          {id: 1, image: 'neom-projects/wo53/wo53-1.jpg'},
+          {id: 2, image: 'neom-projects/wo53/wo53-2.jpg'},
+          {id: 3, image: 'neom-projects/wo53/wo53-3.jpg'},
+          {id: 4, image: 'neom-projects/wo53/wo53-4.jpg'},
+          {id: 5, image: 'neom-projects/wo53/wo53-5.jpg'},
+          {id: 6, image: 'neom-projects/wo53/wo53-6.jpg'},
+
+
+        ]
+      },
       {id: 7 ,
         name: 'Sindalah Island – Marina Promenade & Utility Backbone (000001020/147)' ,
         image:'neom-projects/sindalah-island/sindalah-island-1.JPG',
@@ -176,7 +187,6 @@ export class ProjectsDetailsComponent implements OnInit {
           {id: 7, image: 'neom-projects/sindalah-island/sindalah-island-7.JPG'},
           {id: 8, image: 'neom-projects/sindalah-island/sindalah-island-8.JPG'},
 
-
         ]},
       {id: 8 ,
         name: 'Sindalah Island – Cluster 1' ,
@@ -188,7 +198,22 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Ongoing',
         description:'Geoscape is responsible for supplying a diverse range of plants for Cluster 1 on Sindalah' +
           ' Island. This project aims to enhance the island\'s natural beauty and support biodiversity through' +
-          ' the introduction of various plant species'},
+          ' the introduction of various plant species',
+        subImages: [
+          {id: 1, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-1.jpg'},
+          {id: 2, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-2.jpg'},
+          {id: 3, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-3.jpg'},
+          {id: 4, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-4.jpg'},
+          {id: 5, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-5.jpg'},
+          {id: 6, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-6.jpg'},
+          {id: 7, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-7.jpg'},
+          {id: 8, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-8.jpg'},
+          {id: 9, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-9.jpg'},
+          {id: 10, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-10.jpg'},
+          {id: 11, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-11.jpg'},
+          {id: 12, image: 'neom-projects/sindalah-Island-cluster/sindalah-Island-cluster-12.jpg'},
+
+        ]},
       {id: 9 ,
         name: 'NEOM Company – The LINE (WO 4200000127-02)' ,
         image:'',
@@ -199,7 +224,17 @@ export class ProjectsDetailsComponent implements OnInit {
         status:'Completed',
         description:'As part of the ambitious NEOM project, The LINE required the transplantation' +
           ' of native trees to preserve the natural landscape. Geoscape successfully' +
-          ' completed this task, ensuring that the environmental integrity of the area was maintained.'},
+          ' completed this task, ensuring that the environmental integrity of the area was maintained.',
+        subImages: [
+          {id: 1, image: 'neom-projects/wo42/wo42-1.jpg'},
+          {id: 2, image: 'neom-projects/wo42/wo42-2.jpg'},
+          {id: 3, image: 'neom-projects/wo42/wo42-3.jpg'},
+          {id: 4, image: 'neom-projects/wo42/wo42-4.jpg'},
+          {id: 5, image: 'neom-projects/wo42/wo42-5.jpg'},
+          {id: 6, image: 'neom-projects/wo42/wo42-6.jpg'},
+          {id: 7, image: 'neom-projects/wo42/wo42-7.jpg'},
+          {id: 8, image: 'neom-projects/wo42/wo42-8.jpg'},
+        ]},
       {id: 10 ,
         name: 'Infrastructure and Public Buildings on Prince Mohammad Bin Salman Road – Phase 1 Section 2 ' +
           '(Package 2B) of the Sports Boulevard Project in Riyadh City (Cycle Bridge)' ,
