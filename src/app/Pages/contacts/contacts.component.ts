@@ -143,7 +143,7 @@ export class ContactsComponent implements OnInit {
 
   sendEmail(data:any) {
   // let emailUrl = 'http://localhost:3000/send-email';
-  let emailUrl = 'http://backend.bassamabassy.me/bundle.js';
+  let emailUrl = 'https://backend.bassamabassy.me/bundle.js';
     return this._http.post(emailUrl, data);
   }
 
