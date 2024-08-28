@@ -36,10 +36,6 @@ export class ContactsComponent implements OnInit {
   message: string | undefined;
   phone: string | undefined;
   selectedServices: any | undefined;
-
-  isSubmitting: boolean = false;
-  isSuccess: boolean = false;
-  isError: boolean = false;
   Services: any;
   invalidName: boolean = false;
   invalidEmail: boolean = false;
@@ -102,11 +98,11 @@ export class ContactsComponent implements OnInit {
     this.invalidName = !(this.name != '' && this.name);
     const selectedServiceNames = this.selectedServices.map((item:any) => item.name);
     const data = {
-      name: this.name,
-      phone: this.phone,
-      email: this.email,
-      service:selectedServiceNames,
-      message:this.message,
+      name: this.name || '',
+      phone: this.phone || '',
+      email: this.email || '',
+      service:selectedServiceNames || '',
+      message:this.message || '',
 
     };
 
@@ -142,7 +138,6 @@ export class ContactsComponent implements OnInit {
 
 
   sendEmail(data:any) {
-  // let emailUrl = 'http://localhost:3000/send-email';
   let emailUrl = 'https://backend.bassamabassy.me/bundle.js';
     return this._http.post(emailUrl, data);
   }
@@ -150,7 +145,7 @@ export class ContactsComponent implements OnInit {
 
 
   validateDisable() {
-    // return !(this.name && this.phone && this.email && !this.isLoading);
+    return !(this.name && this.phone && this.email && !this.isLoading);
 
   }
 
