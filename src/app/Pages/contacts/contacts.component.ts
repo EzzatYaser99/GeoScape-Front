@@ -150,7 +150,7 @@ export class ContactsComponent implements OnInit {
 
 
   validateDisable() {
-    return !(this.name && this.phone && this.email && !this.isLoading);
+    // return !(this.name && this.phone && this.email && !this.isLoading);
 
   }
 
