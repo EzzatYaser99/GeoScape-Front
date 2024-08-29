@@ -4,27 +4,29 @@ import {FieldsetModule} from "primeng/fieldset";
 import {PrimeTemplate} from "primeng/api";
 import {ButtonDirective} from "primeng/button";
 import {CardModule} from "primeng/card";
-import {ListboxModule} from "primeng/listbox";
+import {ListboxChangeEvent, ListboxModule} from "primeng/listbox";
 import {GalleriaModule} from "primeng/galleria";
 import {ImageModule} from "primeng/image";
 import {FormsModule} from "@angular/forms";
 import {TabViewModule} from "primeng/tabview";
+import {ProgressSpinnerModule} from "primeng/progressspinner";
 
 @Component({
   selector: 'app-products',
   standalone: true,
-    imports: [
-        AvatarModule,
-        FieldsetModule,
-        PrimeTemplate,
-        ButtonDirective,
-        CardModule,
-        ListboxModule,
-        GalleriaModule,
-        ImageModule,
-        FormsModule,
-        TabViewModule
-    ],
+  imports: [
+    AvatarModule,
+    FieldsetModule,
+    PrimeTemplate,
+    ButtonDirective,
+    CardModule,
+    ListboxModule,
+    GalleriaModule,
+    ImageModule,
+    FormsModule,
+    TabViewModule,
+    ProgressSpinnerModule
+  ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
@@ -34,6 +36,7 @@ export class ProductsComponent implements OnInit {
   geoscapeTrees: any;
   selectedBenitoProduct: any;
   responsiveOptions: any[] | undefined;
+  isLoading: boolean = true;
 constructor() {
   this.responsiveOptions = [
     {
@@ -383,8 +386,19 @@ constructor() {
   ]
 }
   ngOnInit(): void {
-    this.selectedBenitoProduct = this.benitoProducts[1]
+    this.selectedBenitoProduct = this.benitoProducts[1];
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
+
+  onChangeProduct(event: ListboxChangeEvent) {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
+    this.selectedBenitoProduct = event.value;
+  }
 
 }

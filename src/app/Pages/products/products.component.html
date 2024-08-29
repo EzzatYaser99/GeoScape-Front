@@ -101,7 +101,7 @@
                 <p-listbox
                   [filter]="true"
                   [options]="benitoProducts"
-                  [(ngModel)]="selectedBenitoProduct"
+                  (onChange)="onChangeProduct($event)"
                   optionLabel="name"
                   [style]="{ width: '100%' }"
                   [listStyle]="{'max-height': '400px'}"
@@ -115,8 +115,18 @@
               </div>
             </div>
 
-            <div class="col-12  md:col-7 mt-3 md:mt-7 gallery-product">
-              <div class="w-12 m-auto ">
+
+
+            <div class="col-12  md:col-7 mt-3 md:mt-7 gallery-product  flex justify-content-center">
+              <div *ngIf="isLoading" class="card  flex justify-content-center align-items-center">
+                <p-progressSpinner
+                  styleClass="w-4rem h-4rem"
+                  strokeWidth="5"
+                  fill="var(--surface-ground)"
+                  animationDuration=".5s"/>
+              </div>
+
+              <div class="w-12 m-auto zoomin animation-duration-500 animation-iteration-1  " *ngIf="!isLoading">
                 <p-galleria
                   [value]="selectedBenitoProduct?.subImages || benitoProducts[0].subImages "
                   [showItemNavigators]="true"
@@ -135,9 +145,11 @@
                     </div>
                   </ng-template>
                 </p-galleria>
+                <div><p>{{ selectedBenitoProduct?.description || benitoProducts[0].description }}</p></div>
               </div>
-              <div><p>{{ selectedBenitoProduct?.description || benitoProducts[0].description }}</p></div>
             </div>
+
+
 
             <div class="col-12 md:col-5 disappear-in-mobile ">
               <div class="lg:w-10 w-12 m-auto ">
@@ -145,7 +157,7 @@
                 <p-listbox
                   [filter]="true"
                   [options]="benitoProducts"
-                  [(ngModel)]="selectedBenitoProduct"
+                  (onChange)="onChangeProduct($event)"
                   optionLabel="name"
                   [style]="{ width: '100%' }"
                   [listStyle]="{'max-height': '450px'}">

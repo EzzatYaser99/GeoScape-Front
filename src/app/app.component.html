@@ -1,8 +1,27 @@
 <div style="color: #1e1f22" class="w-full p-0 m-0 ">
-  <app-header class="header"></app-header>
-  <div class="w-12 m-auto content px-5">
+  <app-header *ngIf="!isLoading" class="header"></app-header>
+
+  <div *ngIf="isLoading" class=" card flex justify-content-center align-items-center  loading-spinner">
+    <div class="card flex-column justify-content-center align-items-center">
+      <div class="flex justify-content-center align-items-center ">
+        <p-progressSpinner
+          styleClass="w-4rem h-4rem"
+          strokeWidth="5"
+          fill="var(--surface-ground)"
+          animationDuration=".5s"/>
+      </div>
+      <div class="flex justify-content-center align-items-center mt-4 zoomin animation-duration-1000 animation-iteration-1 ">
+        <img class="block" height="60" width="60" src="assets/images/logo.png">
+        <h3 class="mx-2">Welcome <span class="text-blue-500"> To </span>  <span class="text-yellow-500">Geo</span>Scape</h3>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading" class="w-12 m-auto content px-5">
     <router-outlet></router-outlet>
   </div>
+
+
   <app-scroll ></app-scroll>
-  <app-footer></app-footer>
+  <app-footer *ngIf="!isLoading"></app-footer>
 </div>

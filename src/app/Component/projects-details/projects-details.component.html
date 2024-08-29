@@ -1,6 +1,15 @@
 
-<div class="my-5">
-<p-card  header=" " *ngIf="selectedProject">
+
+<div *ngIf="isLoading" class="card  flex justify-content-center align-items-center loading-spinner">
+  <p-progressSpinner
+    styleClass="w-4rem h-4rem"
+    strokeWidth="5"
+    fill="var(--surface-ground)"
+    animationDuration=".5s"/>
+</div>
+
+<div class="my-5" *ngIf="!isLoading">
+  <p-card  header=" " *ngIf="selectedProject">
   <div>
   <span><p class="m-0 "><span class="font-bold">Project Name:
   </span>{{ selectedProject.name }}<p></span>
@@ -12,7 +21,7 @@
   <span><p class="m-0"><span class="font-bold">Description : </span>{{ selectedProject.description }}</p></span>
   <span><p class="m-0"><span class="font-bold">Images : </span></p></span>
   </div>
-  <div class="zoomin animation-duration-2000 animation-iteration-1" *ngIf="selectedProject">
+  <div  class="zoomin animation-duration-1000 animation-iteration-1">
     <div class="flex flex-wrap m-auto justify-content-center">
       <div *ngFor="let item of selectedProject.subImages" class="m-3 zoomin  animation-duration-3000 animation-iteration-1 ">
         <p-image
@@ -24,9 +33,14 @@
       </div>
     </div>
 
+    <div class="w-full m-auto text-center "> <button routerLink="/main/projects"  pButton pRipple label="Back"
+                                                     class=" my-2 w-3"></button></div>
   </div>
+
+
 </p-card>
 </div>
+
 
 
 

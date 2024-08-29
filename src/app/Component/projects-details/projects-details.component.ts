@@ -2,11 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {GalleriaModule} from "primeng/galleria";
 import {ListboxModule} from "primeng/listbox";
 import {PrimeTemplate} from "primeng/api";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {ImageModule} from "primeng/image";
 import {ButtonDirective} from "primeng/button";
 import {CardModule} from "primeng/card";
+import {ProgressSpinnerModule} from "primeng/progressspinner";
+import {Ripple} from "primeng/ripple";
 
 @Component({
   selector: 'app-projects-details',
@@ -18,7 +20,10 @@ import {CardModule} from "primeng/card";
     FormsModule,
     ImageModule,
     ButtonDirective,
-    CardModule
+    CardModule,
+    ProgressSpinnerModule,
+    Ripple,
+    RouterLink
   ],
   templateUrl: './projects-details.component.html',
   styleUrl: './projects-details.component.scss'
@@ -28,6 +33,7 @@ export class ProjectsDetailsComponent implements OnInit {
   projects: any[] = [];
   selectedProject: any;
   responsiveOptions: any[] | undefined;
+  isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute) {
     this.projects = [
@@ -330,7 +336,9 @@ export class ProjectsDetailsComponent implements OnInit {
       }
     ];
     this.getServices();
-
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
 

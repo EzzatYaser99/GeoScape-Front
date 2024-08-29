@@ -3,10 +3,11 @@ import {ButtonDirective} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {PrimeTemplate} from "primeng/api";
 import {ActivatedRoute} from "@angular/router";
-import {ListboxModule} from "primeng/listbox";
+import {ListboxChangeEvent, ListboxModule} from "primeng/listbox";
 import {FormsModule} from "@angular/forms";
 import {GalleriaModule} from "primeng/galleria";
 import {ImageModule} from "primeng/image";
+import {ProgressSpinnerModule} from "primeng/progressspinner";
 
 @Component({
   selector: 'app-services-details',
@@ -18,7 +19,8 @@ import {ImageModule} from "primeng/image";
     ListboxModule,
     FormsModule,
     GalleriaModule,
-    ImageModule
+    ImageModule,
+    ProgressSpinnerModule
   ],
   templateUrl: './service-details.component.html',
   styleUrl: './service-details.component.scss'
@@ -27,6 +29,7 @@ export class ServiceDetailsComponent implements OnInit {
   services: any[] = [];
   selectedServices: any;
   responsiveOptions: any[] | undefined;
+  isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute) {
     this.services = [
@@ -376,7 +379,9 @@ export class ServiceDetailsComponent implements OnInit {
       }
     ];
     this.getServices();
-
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
 
@@ -387,5 +392,13 @@ export class ServiceDetailsComponent implements OnInit {
       .paramMap
       .get('id');
     this.selectedServices = this.services.find(value => value.id == Number(id))
+  }
+
+  onChangeServices(event: ListboxChangeEvent) {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+    this.selectedServices = event.value;
   }
 }
