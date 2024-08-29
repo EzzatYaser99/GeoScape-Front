@@ -398,7 +398,7 @@ export class ServiceDetailsComponent implements OnInit {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-    }, 2000);
+    }, 1000);
     this.selectedServices = event.value;
   }
 }

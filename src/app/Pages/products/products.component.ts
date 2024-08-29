@@ -397,7 +397,7 @@ constructor() {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-    }, 1500);
+    }, 1000);
     this.selectedBenitoProduct = event.value;
   }
 

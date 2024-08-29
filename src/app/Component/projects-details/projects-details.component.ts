@@ -335,14 +335,14 @@ export class ProjectsDetailsComponent implements OnInit {
         numVisible: 2
       }
     ];
-    this.getServices();
+    this.getProjects();
     setTimeout(() => {
       this.isLoading = false;
     }, 1500);
   }
 
 
-  private getServices() {
+  private getProjects() {
     this.selectedProject = []
     let id: string | null = this.route
       .snapshot

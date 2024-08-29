@@ -1,11 +1,16 @@
 import {Component, OnInit, Sanitizer} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
+import {ProgressSpinnerModule} from "primeng/progressspinner";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-uploaded-pdf',
   standalone: true,
-  imports: [],
+  imports: [
+    ProgressSpinnerModule,
+    NgIf
+  ],
   templateUrl: './uploaded-pdf.component.html',
   styleUrl: './uploaded-pdf.component.scss'
 })
@@ -13,6 +18,7 @@ export class UploadedPdfComponent implements OnInit {
   documents: any;
   selectedDocument: any;
   url: any;
+  isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute ,private _sanitizer :DomSanitizer ) {
     this.documents = [
@@ -55,6 +61,9 @@ export class UploadedPdfComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDocument();
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3500);
   }
 
   private getDocument() {
@@ -66,7 +75,8 @@ export class UploadedPdfComponent implements OnInit {
       .get('id');
     this.selectedDocument = this.documents.find((value:any) => value.id == Number(id))
     this.url = 'assets/document-approvals/'+ this.selectedDocument.pdfSrc;
-   this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.url)
+   this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.url);
+
   }
 
 }
