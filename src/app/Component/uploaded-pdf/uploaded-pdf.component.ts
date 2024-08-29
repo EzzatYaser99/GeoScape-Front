@@ -63,7 +63,7 @@ export class UploadedPdfComponent implements OnInit {
     this.getDocument();
     setTimeout(() => {
       this.isLoading = false;
-    }, 3500);
+    }, 5000);
   }
 
   private getDocument() {

@@ -31,9 +31,22 @@
         fill="var(--surface-ground)"
         animationDuration=".5s"/>
     </div>
-    <div class="w-12 m-auto zoomin animation-duration-1000 animation-iteration-1" *ngIf="!isLoading" >
+
+
+    <div *ngIf="showSelectedProduct" class=" card flex justify-content-center align-items-center  loading-spinner">
+      <div class="card flex-column justify-content-center align-items-center">
+        <div class="flex justify-content-center align-items-center mt-4 zoomin animation-duration-1000 animation-iteration-1 ">
+          <img class="block" height="60" width="60" src="assets/images/logo.png">
+          <h3 class="mx-2">Please Select <span class="text-yellow-500">Geo</span>Scape
+            Service</h3>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="w-12 m-auto zoomin animation-duration-1000 animation-iteration-1" *ngIf="!isLoading && !showSelectedProduct" >
       <p-galleria
-        [value]="selectedServices?.subImages || services[0].subImages "
+        [value]="selectedServices?.subImages"
         [showItemNavigators]="true"
         [responsiveOptions]="responsiveOptions"
         [containerStyle]="{ 'max-width': '100%' }"
@@ -54,10 +67,10 @@
       </p-galleria>
 
 
-      <div><h3>{{ selectedServices?.name || services[0].name }}</h3></div>
-      <div><p>{{ selectedServices?.description || services[0].description }}</p></div>
+      <div><h3>{{ selectedServices?.name}}</h3></div>
+      <div><p>{{ selectedServices?.description }}</p></div>
       <div><h3> Our Approach </h3></div>
-      <div><p>{{ selectedServices?.whatWeDo || services[0].whatWeDo }}</p></div>
+      <div><p>{{ selectedServices?.whatWeDo}}</p></div>
 
     </div>
 

@@ -37,6 +37,7 @@ export class ProductsComponent implements OnInit {
   selectedBenitoProduct: any;
   responsiveOptions: any[] | undefined;
   isLoading: boolean = true;
+  showSelectedProduct: boolean =false;
 constructor() {
   this.responsiveOptions = [
     {
@@ -394,11 +395,19 @@ constructor() {
 
 
   onChangeProduct(event: ListboxChangeEvent) {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-    this.selectedBenitoProduct = event.value;
+    if (event.value) {
+      this.showSelectedProduct = false
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
+      this.selectedBenitoProduct = event.value;
+
+    } else {
+      this.showSelectedProduct = true;
+      this.selectedBenitoProduct = []
+    }
+
   }
 
 }

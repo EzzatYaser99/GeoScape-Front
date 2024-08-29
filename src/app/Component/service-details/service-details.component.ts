@@ -30,6 +30,7 @@ export class ServiceDetailsComponent implements OnInit {
   selectedServices: any;
   responsiveOptions: any[] | undefined;
   isLoading: boolean = true;
+  showSelectedProduct: boolean =false;
 
   constructor(private route: ActivatedRoute) {
     this.services = [
@@ -395,10 +396,17 @@ export class ServiceDetailsComponent implements OnInit {
   }
 
   onChangeServices(event: ListboxChangeEvent) {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-    this.selectedServices = event.value;
+
+    if (event.value) {
+      this.showSelectedProduct = false
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
+      this.selectedServices = event.value;
+    }else{
+      this.showSelectedProduct= true;
+      this.selectedServices=[]
+    }
   }
 }
