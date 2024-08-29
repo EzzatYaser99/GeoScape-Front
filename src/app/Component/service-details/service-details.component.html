@@ -23,7 +23,7 @@
   </div>
 
 
-  <div class="col-12  md:col-8 mt-3 md:mt-7 gallery-product flex justify-content-center">
+  <div class="col-12  md:col-8 mt-3 md:mt-7  flex justify-content-center">
     <div *ngIf="isLoading" class="card  flex justify-content-center align-items-center">
       <p-progressSpinner
         styleClass="w-4rem h-4rem"
@@ -37,14 +37,14 @@
       <div class="card flex-column justify-content-center align-items-center">
         <div class="flex justify-content-center align-items-center mt-4 zoomin animation-duration-1000 animation-iteration-1 ">
           <img class="block" height="60" width="60" src="assets/images/logo.png">
-          <h3 class="mx-2">Please Select <span class="text-yellow-500">Geo</span>Scape
-            Service</h3>
+          <h4 class="mx-2">Please Select <span class="text-yellow-500">Geo</span>Scape
+            Service</h4>
 
         </div>
       </div>
     </div>
 
-    <div class="w-12 m-auto zoomin animation-duration-1000 animation-iteration-1" *ngIf="!isLoading && !showSelectedProduct" >
+    <div class="w-12 m-auto zoomin animation-duration-1000 animation-iteration-1 gallery-product" *ngIf="!isLoading && !showSelectedProduct" >
       <p-galleria
         [value]="selectedServices?.subImages"
         [showItemNavigators]="true"
