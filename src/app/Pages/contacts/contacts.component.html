@@ -48,6 +48,7 @@ zoomin animation-duration-1000 animation-iteration-1"
         <ng-template let-value pTemplate="selectedItems">
           <div class="inline-flex align-items-center gap-2 px-1" *ngFor="let service of value">
             <img  loading="lazy"
+                  [alt]="service.name"
               [src]="'assets/images/services/'+ service.image"
               [class]="'flag flag-' + service.name.toLowerCase()"
               style="width: 36px"/>
@@ -58,7 +59,8 @@ zoomin animation-duration-1000 animation-iteration-1"
         <ng-template let-service pTemplate="item">
           <div class="flex align-items-center gap-2">
             <img loading="lazy"
-              [src]="'assets/images/services/'+ service.image"
+                 [alt]="service.name"
+                 [src]="'assets/images/services/'+ service.image"
               [class]="'image-radius flag flag-' + service.name.toLowerCase() "
               style="width: 50px"/>
             <div>{{ service.name }}</div>

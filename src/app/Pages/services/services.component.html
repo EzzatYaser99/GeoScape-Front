@@ -13,7 +13,9 @@
        justify-content-sm-center">
         <div class="product-item-content sm:w-5  m-auto">
           <div class=" relative overflow-hidden">
-            <img loading="lazy" height="" style="border:3px solid white" class="product-image" [src]="'assets/images/services/'+ service.image">
+            <img [alt]="service.name+ 'images'" loading="lazy" height="" style="border:3px solid white" class="product-image"
+                 [src]="'assets/images/services/'+
+            service.image">
           </div>
           <div class="mt-4">
             <h2>{{ service.name }}</h2>
@@ -48,7 +50,7 @@
           <div class="card flex justify-content-center">
             <p-card header="{{ service.name }}">
               <ng-template pTemplate="header">
-                <img loading="lazy" alt="Card" [src]="'assets/images/services/'+ service.image"/>
+                <img loading="lazy" [alt]="service.name+ 'images'" [src]="'assets/images/services/'+ service.image"/>
               </ng-template>
               <p class="m-0" style="min-height: 145px;">
                 {{ service.description }}

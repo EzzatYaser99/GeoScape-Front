@@ -78,7 +78,9 @@ zoomin animation-duration-1000 animation-iteration-1"
             <div class="approvals text-center m-3 zoomin  animation-duration-1000 animation-iteration-1 ">
 
               <a target="_self" [routerLink]="'/main/uploadPdf/'+document.id"><img loading="lazy"
-                width="235"
+                                                                                   [alt]="document.name"
+
+                                                                                   width="235"
                 height="300"
                 class="block m-auto" [src]="'assets/document-approvals/'+ document.imgSrc" alt="{{ document.name }}">
               </a>
