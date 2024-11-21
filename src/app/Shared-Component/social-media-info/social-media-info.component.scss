@@ -1,9 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 
 .socialMedia i {
   font-size: 25px;
   padding: 8px;
   color: white !important;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
   transition: all .2s;
   margin-top: 10px;
   background:white;
@@ -11,33 +20,35 @@
   margin-left:10px
 }
 
- .socialMedia {
-   .facebook {
-     color: #0b40ec !important ;
-   }
-   .whatsapp{
-     color:#86BB46 !important;
-   }
-   .linkedin {
-     color: #266aea !important;
-   }
+.socialMedia {
+  .facebook {
+    color: #0b40ec !important ;
+  }
+  .whatsapp{
+    color:#86BB46 !important;
+  }
+  .linkedin {
+    color: #266aea !important;
+  }
 
-   .instagram {
-     color: #da6502 !important;
-   }
-   .twitter {
-     color: black !important;
-   }
+  .instagram {
+    color: #da6502 !important;
+  }
+  .twitter {
+    color: black !important;
+  }
 
-   i:hover{
-     color:#86BB46 !important;
-   }
- }
+  i:hover{
+    color:#86BB46 !important;
+  }
+}
 @media screen and (max-width: 440px) {
   .socialMedia i {
     font-size: 20px;
     padding: 5px;
     color: white !important;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
     margin-top: 10px;
     background:white;

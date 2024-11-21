@@ -1,5 +1,5 @@
 <section class="carsoul-bg  zoomin animation-duration-1000 animation-iteration-1"
-         style='background-image: url("assets/images/services/ourServices.jpg")' xmlns="http://www.w3.org/1999/html">
+         style='background-image: url("assets/images/services/ourServices.webp")' xmlns="http://www.w3.org/1999/html">
   <div class="services-overlay">
   <p-carousel [className]="'zoomin animation-duration-2000 animation-iteration-1'"
     [autoplayInterval]="5000" [circular]="true" [numScroll]="1" [numVisible]="1"
@@ -13,7 +13,7 @@
        justify-content-sm-center">
         <div class="product-item-content sm:w-5  m-auto">
           <div class=" relative overflow-hidden">
-            <img height="" style="border:3px solid white" class="product-image" [src]="'assets/images/services/'+ service.image">
+            <img loading="lazy" height="" style="border:3px solid white" class="product-image" [src]="'assets/images/services/'+ service.image">
           </div>
           <div class="mt-4">
             <h2>{{ service.name }}</h2>
@@ -31,7 +31,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold">GEOSCAPE</span>
       </div>
@@ -48,7 +48,7 @@
           <div class="card flex justify-content-center">
             <p-card header="{{ service.name }}">
               <ng-template pTemplate="header">
-                <img alt="Card" [src]="'assets/images/services/'+ service.image"/>
+                <img loading="lazy" alt="Card" [src]="'assets/images/services/'+ service.image"/>
               </ng-template>
               <p class="m-0" style="min-height: 145px;">
                 {{ service.description }}

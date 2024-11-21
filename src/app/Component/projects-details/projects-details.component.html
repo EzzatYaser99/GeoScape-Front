@@ -25,6 +25,7 @@
     <div class="flex flex-wrap m-auto justify-content-center">
       <div *ngFor="let item of selectedProject.subImages" class="m-3 zoomin  animation-duration-3000 animation-iteration-1 ">
         <p-image
+          loading="lazy"
           [src]="'assets/images/projects-details/'+ item?.image"
           alt="Image"
           width="250"

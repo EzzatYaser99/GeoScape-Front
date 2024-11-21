@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,19 +69,21 @@ h2, h4 {
 }
 .zoom-img {
   &:hover img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 }
 @media screen and (max-width: 770px) {
   :host ::ng-deep {
     .p-carousel .p-carousel-indicators {
-        padding: 10px 0px;
+      padding: 10px 0px;
 
-        .p-carousel-indicator button {
-          width: 1rem;
+      .p-carousel-indicator button {
+        width: 1rem;
 
-        }
       }
+    }
   }
   .zoom-img {
     img {

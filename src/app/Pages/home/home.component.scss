@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,11 +22,13 @@
   max-width: 600px;
   background-color: #ffffff87;
   border-radius: 20px;
- p {
+  p {
     font-size: 25px;
     color: #646161;
     font-weight: 700;
     text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 1200ms 400ms ease;
+    -o-transition: all 1200ms 400ms ease;
     transition: all 1200ms 400ms ease;
   }
 }
@@ -46,7 +55,10 @@
 /* End fieldset Style*/
 
 .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   text-align: center;
   border-radius: 5px;
@@ -54,6 +66,7 @@
   min-height: 250px;
 
   &:hover {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
   }
@@ -88,20 +101,20 @@
   display:none;
 }
 
-  .document {
-    img {
-      max-height: 180px;
-      min-height: 180px;
-      border: 2px solid #86BB46;
-      cursor: pointer;
-    }
-    min-height: 300px;
-    a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+.document {
+  img {
+    max-height: 180px;
+    min-height: 180px;
+    border: 2px solid #86BB46;
+    cursor: pointer;
   }
+  min-height: 300px;
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+}
 
 .approvals-documents {
   .approvals {
@@ -129,5 +142,4 @@
     }
   }
 }
-
 

@@ -1,8 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 $GreenColor: #86BB46;
 $box-shadow: 0px 9px 31.3px 0px rgba(82, 146, 39, 0.29);
-
-//@import 'src/assets/scss/variable';
 
 .header-style{
   border-top: 10px solid $GreenColor;

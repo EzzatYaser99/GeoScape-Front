@@ -1,13 +1,13 @@
 <div class="bg-image flex justify-content-center align-items-center
  zoomin animation-duration-1000 animation-iteration-1"
-     style='background-image: url("assets/images/products-page/our-products.jpg")'>
+     style='background-image: url("assets/images/products-page/our-products.webp")'>
 </div>
 <div class="my-5 zoomin animation-duration-1000 animation-iteration-1">
   <p-fieldset>
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold">GEOSCAPE Products
    </span>
@@ -21,7 +21,7 @@
               <span class="font-bold white-space-nowrap m-0">
                    Plants
                 </span>
-              <img width="40" height="40" src="assets/images/products-page/plant.jpg">
+              <img loading="lazy" width="40" height="40" src="assets/images/products-page/plant.webp">
             </div>
           </ng-template>
           <p class="m-0 my-4" >
@@ -33,7 +33,7 @@
                 <div class="card flex justify-content-center">
                   <p-card header="{{ plant.name }}">
                     <ng-template pTemplate="header">
-                      <img class="" height="250" width="80%" [alt]="plant.name"
+                      <img loading="lazy" class="" height="250" width="80%" [alt]="plant.name"
                            [src]="'assets/images/products-page/plants/'+ plant.imageSrc"/>
                     </ng-template>
                     <p class="m-0" style="min-height: 80px;">
@@ -52,7 +52,7 @@
               <span class="font-bold white-space-nowrap m-0">
                  Trees
                 </span>
-              <img width="40" height="40" src="assets/images/products-page/tree.jpg">
+              <img loading="lazy" width="40" height="40" src="assets/images/products-page/tree.webp">
             </div>
           </ng-template>
           <p class="m-0 my-4">
@@ -64,7 +64,7 @@
                 <div class="card flex justify-content-center">
                   <p-card header="{{ tree.name }}">
                     <ng-template pTemplate="header">
-                      <img height="250" alt="Card" [src]="'assets/images/products-page/'+ tree.imageSrc"/>
+                      <img loading="lazy" height="250" alt="Card" [src]="'assets/images/products-page/'+ tree.imageSrc"/>
                     </ng-template>
 
                     <p class="m-0">
@@ -88,7 +88,7 @@
               <span class="font-bold white-space-nowrap m-0">
                  BENITO Urban
                 </span>
-              <img width="40" height="40" src="assets/images/products-page/park_bench_and_lamp.jpg">
+              <img loading="lazy" width="40" height="40" src="assets/images/products-page/park_bench_and_lamp.webp">
             </div>
           </ng-template>
           <p class="m-0 mt-4">We are excited to introduce our esteemed partner, BENITO Urban. BENITO Urban is a renowned
@@ -130,7 +130,7 @@
               <div *ngIf="showSelectedProduct" class=" card flex justify-content-center align-items-center  loading-spinner">
                 <div class="card flex-column justify-content-center align-items-center">
                   <div class="flex justify-content-center align-items-center mt-4 zoomin animation-duration-1000 animation-iteration-1 ">
-                    <img class="block" height="60" width="60" src="assets/images/logo.png">
+                    <img loading="lazy" class="block" height="60" width="60" src="assets/images/logo.webp">
                     <h4 class="mx-2">Please Select <span class="text-blue-500"> a Product </span>
                     </h4>
                   </div>
@@ -145,14 +145,14 @@
                   [containerStyle]="{ 'max-width': '100%' }"
                   [numVisible]="3">
                   <ng-template pTemplate="item" let-item>
-                    <img class="w-full" [style.border-radius]="'10px 10px 0px 0px '" [style.border]="'2px solid #86BB46'"
+                    <img loading="lazy" class="w-full" [style.border-radius]="'10px 10px 0px 0px '" [style.border]="'2px solid #86BB46'"
                          [src]="'assets/images/products-page/benito-products/'+ item.imageSrc"
                          alt="Image"
                          width="100%" height="400">
                   </ng-template>
                   <ng-template pTemplate="thumbnail" let-item>
                     <div class="grid w-full mx-auto  grid-nogutter justify-content-center">
-                      <img [src]="'assets/images/products-page/benito-products/'+ item.imageSrc" style="width:100px; height:60px;"/>
+                      <img loading="lazy" [src]="'assets/images/products-page/benito-products/'+ item.imageSrc" style="width:100px; height:60px;"/>
                     </div>
                   </ng-template>
                 </p-galleria>

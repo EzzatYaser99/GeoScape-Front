@@ -1,6 +1,6 @@
 <div class="bg-image flex justify-content-start align-items-center text-center
 zoomin animation-duration-1000 animation-iteration-1"
-     style='background-image: url("assets/images/home-page/home-page.jpg")'>
+     style='background-image: url("assets/images/home-page/home-page.webp")'>
     <div class="home-text zoomin animation-duration-2000 animation-iteration-1">
       <p class="mx-1">Our goal is to design stunning and functional environments
       for our clients with the
@@ -12,7 +12,7 @@ zoomin animation-duration-1000 animation-iteration-1"
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold ml-1">Welcome to Geoscape Landscape</span>
       </div>
@@ -67,7 +67,7 @@ zoomin animation-duration-1000 animation-iteration-1"
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Company Approvals</span>
       </div>
@@ -77,7 +77,7 @@ zoomin animation-duration-1000 animation-iteration-1"
           <div class="flex flex-wrap m-auto justify-content-center">
             <div class="approvals text-center m-3 zoomin  animation-duration-1000 animation-iteration-1 ">
 
-              <a target="_self" [routerLink]="'/main/uploadPdf/'+document.id"><img
+              <a target="_self" [routerLink]="'/main/uploadPdf/'+document.id"><img loading="lazy"
                 width="235"
                 height="300"
                 class="block m-auto" [src]="'assets/document-approvals/'+ document.imgSrc" alt="{{ document.name }}">

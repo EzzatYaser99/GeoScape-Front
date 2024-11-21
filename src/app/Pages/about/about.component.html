@@ -1,6 +1,6 @@
 <div class="bg-image flex justify-content-center align-items-center
  zoomin animation-duration-1000 animation-iteration-1"
-     style='background-image: url("assets/images/about-page/about.jpeg")'>
+     style='background-image: url("assets/images/about-page/about.webp")'>
   <div style="z-index: 100000;"><h2 class="text-white">About Us</h2></div>
 
 </div>
@@ -10,7 +10,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Story</span>
       </div>
@@ -19,7 +19,7 @@
     <div class="grid w-full mx-auto">
       <div class="col-12 md:col-6 flex align-content-center align-items-center">
         <div class="zoom-img m-auto">
-          <img   src="assets/images/about-page/ourStory.jpeg">
+          <img loading="lazy"  src="assets/images/about-page/ourStory.webp">
         </div>
       </div>
       <div class="col-12 md:col-6 flex align-items-center">
@@ -43,7 +43,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Services</span>
       </div>
@@ -66,7 +66,7 @@
       </div>
       <div class="col-12 md:col-6 flex align-content-center align-items-center display-in-small-screen">
         <div class="zoom-img m-auto">
-          <img   src="assets/images/about-page/ourServices.jpeg">
+          <img loading="lazy"  src="assets/images/about-page/ourServices.webp">
         </div>
       </div>
 
@@ -81,7 +81,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Mission</span>
       </div>
@@ -89,7 +89,7 @@
     <div class="grid w-full mx-auto">
       <div class="col-12 md:col-6 flex align-content-center align-items-center">
         <div class="zoom-img m-auto">
-          <img src="assets/images/about-page/ourMission.jpeg">
+          <img loading ="lazy" src="assets/images/about-page/ourMission.webp">
         </div>
       </div>
       <div class="col-12 md:col-6 flex  align-items-center">
@@ -113,7 +113,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Commitment</span>
       </div>
@@ -133,7 +133,7 @@
       </div>
       <div class="col-12 md:col-6 flex align-content-center align-items-center">
         <div class="zoom-img m-auto">
-          <img   src="assets/images/about-page/ourCommitment.jpeg">
+          <img loading="lazy"   src="assets/images/about-page/ourCommitment.webp">
         </div>
       </div>
 
@@ -147,7 +147,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Products</span>
       </div>
@@ -179,7 +179,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Company Profile</span>
       </div>
@@ -207,7 +207,7 @@
     <ng-template pTemplate="header">
       <div class="flex align-items-center gap-1 px-2">
         <p-avatar
-          [image]="'assets/images/logo.png'"
+          [image]="'assets/images/logo.webp'"
           shape="circle"/>
         <span class="font-bold greenColor ml-2">Our Clients <i class="fa-solid fa-people-robbery"></i> </span>
       </div>
@@ -226,7 +226,7 @@
           <div class="border-1 surface-border border-round m-2 p-3">
             <div class="mb-3">
               <div class="relative m-auto text-center">
-                <img width="100%" height="120px"
+                <img loading="lazy" width="100%" height="120px"
                      src="assets/images/about-page/client/{{ client.image }}"
                      [alt]="client.name"
                      class="border-round m-auto"/>

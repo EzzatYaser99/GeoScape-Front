@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .bg-image {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -41,16 +48,29 @@
   -webkit-box-orient: vertical;
 }
 .card {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
   transition: all .3s;
   img{
     border-radius:10px 10px 0px 0px
   }
   &:hover {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
     transform: scale(1.07);
   }
 }
 .p-card .p-card-body {
   padding: 1rem;
+}
+
+:host ::ng-deep {
+  .p-tabview .p-tabview-panels {
+    padding: 0px;
+  }
+  .p-tabview .p-tabview-nav li .p-tabview-nav-link{
+    padding:5px 10px;
+  }
 }
 
 :host ::ng-deep {

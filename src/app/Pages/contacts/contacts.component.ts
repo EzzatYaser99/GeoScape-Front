@@ -47,18 +47,18 @@ export class ContactsComponent implements OnInit {
 
   constructor(private _http: HttpClient ,private messageService: MessageService) {
     this.Services = [
-      {id: 1 , name: 'Landscape Design' ,image:'Landscape-Design.jpg'},
-      {id: 2 , name: 'SoftScape' ,image:'Soft-Landscape.jpg'},
-      {id: 3 , name: 'Nursery' ,image:'Nursery.jpg'},
-      {id: 4 , name: 'Irrigation' ,image:'Irrigation.jpeg'},
-      {id: 5 , name: 'Water Features' ,image:'Water-Features.jpg'},
-      {id: 6 , name: 'Water & Drainage Systems' ,image:'Water-Systems.jpg'},
-      {id: 7 , name: 'HardScape' ,image:'Hard-Landscape.jpg'},
-      {id: 8 , name: 'Maintenance' ,image:'Landscape-Maintenance.jpg'},
-      {id: 9 , name: 'Street Lighting' ,image:'Street-Lighting.jpg'},
-      {id: 10 , name: 'Street Furniture' ,image:'Street-Furniture.jpg'},
-      {id: 11 , name: 'Playground Equipment' ,image:'Playground-Equipment.jpg'},
-      {id: 12 , name: 'Covers and Grates' ,image:'covers-and-grates.jpg'},
+      {id: 1 , name: 'Landscape Design' ,image:'Landscape-Design.webp'},
+      {id: 2 , name: 'SoftScape' ,image:'Soft-Landscape.webp'},
+      {id: 3 , name: 'Nursery' ,image:'Nursery.webp'},
+      {id: 4 , name: 'Irrigation' ,image:'Irrigation.webp'},
+      {id: 5 , name: 'Water Features' ,image:'Water-Features.webp'},
+      {id: 6 , name: 'Water & Drainage Systems' ,image:'Water-Systems.webp'},
+      {id: 7 , name: 'HardScape' ,image:'Hard-Landscape.webp'},
+      {id: 8 , name: 'Maintenance' ,image:'Landscape-Maintenance.webp'},
+      {id: 9 , name: 'Street Lighting' ,image:'Street-Lighting.webp'},
+      {id: 10 , name: 'Street Furniture' ,image:'Street-Furniture.webp'},
+      {id: 11 , name: 'Playground Equipment' ,image:'Playground-Equipment.webp'},
+      {id: 12 , name: 'Covers and Grates' ,image:'covers-and-grates.webp'},
 
     ];
 
@@ -138,7 +138,9 @@ export class ContactsComponent implements OnInit {
 
 
   sendEmail(data:any) {
-  let emailUrl = 'https://backend.bassamabassy.me/bundle.js';
+  // let emailUrl = 'http://localhost:3000/send-email';
+    let emailUrl = 'https://backend.bassamabassy.me/bundle.js';
+
     return this._http.post(emailUrl, data);
   }
 

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .carsoul-bg {
   background-size: 100% 100%;
@@ -42,7 +49,11 @@
         background-color: white;
         width: 14px !important;
         height: 14px !important;
+        -webkit-transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+        transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+        -o-transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
         transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
         border-radius: 50% !important;
       }
 
@@ -50,7 +61,12 @@
         background-color: #ffbe33 !important;
       }
 
+      -webkit-box-pack: center !important;
+
+      -ms-flex-pack: center !important;
+
       justify-content: center !important;
+      -ms-flex-line-pack: end !important;
       align-content: end !important;
     }
 
@@ -105,11 +121,15 @@
 }
 
 .card {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
   transition: all .3s;
-img{
-  border-radius:10px 10px 0px 0px
-}
+  img{
+    border-radius:10px 10px 0px 0px
+  }
   &:hover {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
     transform: scale(1.07);
   }
 }

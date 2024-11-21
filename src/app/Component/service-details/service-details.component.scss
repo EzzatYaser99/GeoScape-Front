@@ -1,13 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .appear-in-mobile{
   display:none;
 }
 @media screen and (max-width: 770px) {
-    :host ::ng-deep {
-      .p-listbox-list {
-        max-height: 300px;
-      }
+  :host ::ng-deep {
+    .p-listbox-list {
+      max-height: 300px;
     }
+  }
   .gallery-product {
     img {
       height: 250px

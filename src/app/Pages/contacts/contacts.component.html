@@ -1,6 +1,6 @@
 <div class="bg-image flex justify-content-center align-items-center
 zoomin animation-duration-1000 animation-iteration-1"
-     style='background-image: url("assets/images/contact-page/ContactHero.jpg")'>
+     style='background-image: url("assets/images/contact-page/ContactHero.webp")'>
   <div><h1 class="text-white">Contact Us</h1></div>
 </div>
 <div class="grid w-full mx-auto address-card px-2 sm:px-0 mt-0 zoomin animation-duration-1000 animation-iteration-1">
@@ -47,7 +47,7 @@ zoomin animation-duration-1000 animation-iteration-1"
         optionLabel="name">
         <ng-template let-value pTemplate="selectedItems">
           <div class="inline-flex align-items-center gap-2 px-1" *ngFor="let service of value">
-            <img
+            <img  loading="lazy"
               [src]="'assets/images/services/'+ service.image"
               [class]="'flag flag-' + service.name.toLowerCase()"
               style="width: 36px"/>
@@ -57,7 +57,7 @@ zoomin animation-duration-1000 animation-iteration-1"
         </ng-template>
         <ng-template let-service pTemplate="item">
           <div class="flex align-items-center gap-2">
-            <img
+            <img loading="lazy"
               [src]="'assets/images/services/'+ service.image"
               [class]="'image-radius flag flag-' + service.name.toLowerCase() "
               style="width: 50px"/>
@@ -77,10 +77,10 @@ zoomin animation-duration-1000 animation-iteration-1"
                   class="p-button-success w-11 md:w-8 lg:w-7 mt-1 green-Bg-Color"></button></div>
 
     @if (showMessage){
-    <div  class="w-12  mt-1 successMessage m-auto">
+    <div  class="w-12 successMessage m-auto">
     <p-messages [(value)]="successMessage" [enableService]="false" />
     </div>
-      <div  class="w-12 lg:w-7 mt-1 errorMessage m-auto">
+      <div  class="w-12 errorMessage m-auto">
     <p-messages [(value)]="errorMessage" [enableService]="false" />
     </div>
     }
